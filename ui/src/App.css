@@ -1,3 +1,70 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  margin: 5vmin;
+  margin-left: 10vmin;
+  margin-right: 10vmin;
+}
+
+/* -- Navbar -- */
+
+.navbar {
+  text-align: center;
+  padding: 2vmin;
+  font-size: 24px;
+}
+
+.links {
+  float: right;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.navbar a {
+  padding-inline: 10px;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover:not(.logo) {
+  color: dodgerblue;
+}
+
+.logo {
+  font-weight: 700;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 0;
+  transition: height 0.3s;
+  background: color-mix(in srgb, yellow 50%, transparent);
+
+}
+
+.logo:hover::before {
+  top: 2;
+  left: 2;
+  height: 100%;
+}
+
+.home {
+  text-align: center;
+}
+
+.footer {
+  margin: auto;
   text-align: center;
 }
