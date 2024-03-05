@@ -1,3 +1,9 @@
+:root {
+  --blue: #1d4e89; 
+  --light-blue: #002bca;
+  --black: #212155;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -5,6 +11,7 @@
   margin-left: 30vmin;
   margin-right: 30vmin;
   text-align: center;
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {
@@ -14,45 +21,34 @@
   }
 }
 
-/* -- Navbar -- */
-
 .navbar {
   padding: 2vmin;
   font-size: 24px;
   display: flex;
-  flex-direction: row;
-}
-
-@media only screen and (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-  }
 }
 
 .logo-container {
   flex-grow: 1;
-  align-self: center;
+  align-content: center;
 }
 
-.links {
+.navbar > .links {
+  display: flex;
+  flex-grow: 1;
   justify-content: flex-end;
 }
 
-a {
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.navbar a {
-  padding-inline: 10px;
-}
-
-a:visited {
-  color: black;
-}
-
-a:hover:not(.logo) {
-  color: dodgerblue;
+@media only screen and (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar > .links {
+    flex-direction: column;
+  }
+  .logo-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .logo {
@@ -69,7 +65,7 @@ a:hover:not(.logo) {
   width: 100%;
   height: 0;
   transition: height 0.3s;
-  background: color-mix(in srgb, dodgerblue 50%, transparent);
+  background: color-mix(in srgb, blue 50%, transparent);
 }
 
 .logo:hover::before {
@@ -78,8 +74,43 @@ a:hover:not(.logo) {
   height: 100%;
 }
 
-.home {
-  
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.navbar a {
+  padding-inline: 10px;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover:not(.logo) {
+  color: blue;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.jumbotron > .introduction {
+  align-self: center;
+  flex-grow: 1;
+  padding: 1vmin;
+}
+
+.introduction > h1 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.introduction > h2 {
+  margin: 0;
+  color: #9CA3AF;
 }
 
 .footer {
