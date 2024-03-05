@@ -6,7 +6,7 @@ const Profile = () => {
             </div>
             <div className="introduction">
                 <h1>Hi, I'm Francis.</h1>
-                <h2 className="blurb">I'm a full-stack web developer, and pixel artist.</h2>
+                <h2 className="blurb">I'm a full-stack web developer, pixel artist, and game developer.</h2>
                 <div className="socials">
                     <a href="https://github.com/zyenapz" target="_">GitHub</a>
                     <a href="https://www.linkedin.com/in/francistayag/" target="_">LinkedIn</a>

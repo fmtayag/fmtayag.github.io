@@ -1,10 +1,19 @@
 const Footer = () => {
     return (
         <div className="footer">
-            <hr />
-            <p>&copy; Francis Tayag</p>
-            <a href="https://github.com/zyenapz" target="_">GitHub</a>
-            <a href="https://www.linkedin.com/in/francistayag/" target="_">LinkedIn</a>
+            <div>
+                <p>&copy; Francis Tayag</p>
+            </div>
+            <div>
+                <p>
+                    <a href="https://github.com/zyenapz" target="_">GitHub</a>
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/francistayag/" target="_">LinkedIn</a>
+
+                </p>
+            </div>
+
         </div>
     );
 }
