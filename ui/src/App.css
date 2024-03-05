@@ -1,16 +1,16 @@
 /* For debugging only */
-/* * { outline: 1px solid red; }  */
+* { outline: 1px solid #e6e3db; } 
 
 :root {
   --blue: #002bca; 
   --light-blue: #1d4e89; 
-  --black: #11113d;
-  --white: #FAF9F6F9F6EE;
+  --black: #11113D;
+  --white: #FAF9F6;
 }
 
 body {
   background-color: var(--white);
-}
+} 
 
 .App {
   display: flex;
@@ -21,7 +21,7 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   .App {
     margin-left: 10vmin;
     margin-right: 10vmin;
@@ -104,18 +104,36 @@ a:hover:not(.logo) {
 .profile {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10vmin;
+  margin-bottom: 12vmin;
   /* border: 5px solid red; */
 }
 
 .profile > .introduction {
-  align-self: center;
+  align-self: auto;
   flex-grow: 1;
+}
+
+@media only screen and (max-width: 640px) {
+  .profile {
+    flex-direction: column;
+  }
+  .picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4vmax;
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .socials > a {
+    text-align: center;
+  }
 }
 
 .picture {
   display: flex;
-  align-content: center;
 }
 
 .picture img {
@@ -146,7 +164,7 @@ a:hover:not(.logo) {
 }
 
 .socials {
-  margin-top: 4vmax;
+  margin-top: 2vmax;
   text-align: left;
 }
 
@@ -157,4 +175,14 @@ a:hover:not(.logo) {
 
 .footer {
   margin: auto;
+}
+
+.projects-list {
+  text-align: left
+}
+
+.projects-list > h2 {
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  font-size: 20px;
 }
