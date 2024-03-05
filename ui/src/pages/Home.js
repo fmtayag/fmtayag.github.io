@@ -1,10 +1,10 @@
-import Jumbotron from "../components/Jumbotron";
+import Profile from "../components/Profile";
 import ProjectsList from "../components/ProjectsList";
 
 const Home = () => {
     return (
         <div className="home">
-            <Jumbotron />
+            <Profile />
             <ProjectsList />
         </div>
     );
