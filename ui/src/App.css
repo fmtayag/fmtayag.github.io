@@ -115,7 +115,7 @@ a:hover:not(.logo) {
 .profile > .introduction {
   /* align-self: auto; */
   align-self: center;
-  flex-grow: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -124,6 +124,9 @@ a:hover:not(.logo) {
 
 .picture {
   align-self: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 .picture img {
@@ -184,6 +187,8 @@ a:hover:not(.logo) {
   }
   .picture {
     display: flex;
+    flex: 0;
+    align-self: center;
     justify-content: center;
     order: 1;
   }
