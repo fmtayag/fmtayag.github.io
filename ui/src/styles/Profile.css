@@ -40,6 +40,23 @@
     margin: 0;
 }
 
+.profile {
+    animation: fadeInFromLeft ease-in 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .introduction>.blurb {
     color: #9CA3AF;
     font-size: 2rem;
