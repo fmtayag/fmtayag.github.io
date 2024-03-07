@@ -17,13 +17,12 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  margin-top: 3vmin;
   text-align: center;
+  margin-left: 20vmin;
+  margin-right: 20vmin;
 }
 
 .home {
-  margin-left: 10vmin;
-  margin-right: 10vmin;
 }
 
 @media only screen and (max-width: 640px) {
@@ -35,8 +34,7 @@ body {
 .navbar {
   font-size: 20px;
   display: flex;
-  margin-left: 10vmin;
-  margin-right: 10vmin;
+  margin-top: 3vmin;
 }
 
 .logo-container {
@@ -130,8 +128,7 @@ a:hover:not(.logo) {
 }
 
 .picture img {
-  width: 30vw;
-  height: auto;
+  width: 25em;
   /* border-radius: 50%; */
 }
 
@@ -226,17 +223,16 @@ a:hover:not(.logo) {
 }
 
 .projects-list {
-  text-align: left
+  height: 100vh;
+  /* background-color: var(--color1); */
+}
+
+.projects-list > h1 {
+  text-align: left;
 }
 
 @media only screen and (max-width: 640px) {
   .projects-list {
     text-align: center;
   }
-}
-
-.projects-list > h2 {
-  text-transform: uppercase;
-  letter-spacing: 1.25px;
-  font-size: 20px;
 }
