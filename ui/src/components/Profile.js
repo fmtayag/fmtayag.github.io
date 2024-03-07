@@ -12,6 +12,7 @@ const Profile = () => {
                 </div>
 
             </div>
+
             <div className="picture">
                 <img src={process.env.PUBLIC_URL + "/images/Project_76-01.jpg"} alt="profile-pic" />
             </div>
