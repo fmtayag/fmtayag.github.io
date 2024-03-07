@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer div:nth-child(2)>p {
+    display: inline-block;
+    padding-inline: 1rem;
+}

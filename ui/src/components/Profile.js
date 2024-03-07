@@ -1,3 +1,5 @@
+import '../styles/Profile.css';
+
 const Profile = () => {
     return (
         <div className="profile">
