@@ -14,24 +14,45 @@
 }
 
 .navbar .links {
-    display: flex;
+    display: inherit;
     justify-content: flex-end;
 }
 
 @media only screen and (max-width: 640px) {
+
     .navbar {
         flex-direction: column;
     }
 
     .navbar>.links {
+        display: inherit;
         flex-direction: column;
-        display: none;
     }
 
     .logo-container {
         display: flex;
         justify-content: center;
     }
+    .links {
+        animation: linkFade ease-in 0.3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    .hide {
+        display: none !important;
+        flex: unset;
+    }
+    @keyframes linkFade {
+        0% {
+            transform: translateX(-30%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
 }
 
 .logo {
@@ -60,5 +81,39 @@
 }
 
 .navbar>.links a {
-    padding-inline: 40px;
+    padding-inline: 1.5rem;
+}
+
+
+/* ----- Hamburger Menu ----- */
+
+.hamburger {
+    display: none;
+    max-width: 32px;
+    max-height: 32px;
+}
+
+.toggled {
+    background-color: green;
+}
+
+.untoggled {
+    background-color: red;
+}
+
+input[type=checkbox] {
+    opacity: 0;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin: 0;
+}
+
+@media only screen and (max-width: 640px) {
+    .hamburger {
+        display: flex;
+        align-self: center;
+    }
 }
