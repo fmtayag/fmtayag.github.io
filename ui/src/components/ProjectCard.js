@@ -1,18 +1,24 @@
 import '../styles/ProjectCard.css';
 
-const ProjectCard = (/*image_path, title, summary, tech_stacks*/) => {
+const ProjectCard = ({body} /*image_path, title, body, tech_stacks*/) => {
 
-    const image_path = "/images/cat1.png";
+    const image_path = "/images/placeholder.png";
     const title = "Cat"
-    const summary = "Summary"
     const tech_stacks = []
-    
+
     return (
         <div className="project-card">
-            <img className="card-image" src={image_path} alt="card-image" />
+            <div className="image-container">
+                <img src={image_path} />
+            </div>
             <div className="card-info">
-                <h4><b>{title}</b></h4>
-                <p>{summary}</p>
+                <h1 className="heading">Lorem Ipsum</h1>
+                <h2 className="subtitle">Veni Vidi Vici</h2>
+                <p className="body">{body}</p>
+            </div>
+            <div className="buttons-container">
+                <button onClick={() => {console.log("hello")}} className="primary-btn">Read More &gt;</button>
+
             </div>
         </div>
 

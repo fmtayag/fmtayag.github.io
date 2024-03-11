@@ -1,0 +1,16 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 640px) {
+    .container {
+        display: block;
+    }
+    .container div {
+        margin: 2em auto;
+        width: 90%;
+    }
+}

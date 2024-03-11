@@ -2,7 +2,7 @@ import ProjectsList from "../components/ProjectsList";
 
 const Projects = () => {
     return (
-        <div className="portfolio">
+        <div className="projects-list">
             <ProjectsList />
         </div>
     );
