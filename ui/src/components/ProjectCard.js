@@ -1,24 +1,21 @@
 import '../styles/ProjectCard.css';
+import { Link } from 'react-router-dom';
 
-const ProjectCard = ({body} /*image_path, title, body, tech_stacks*/) => {
-
-    const image_path = "/images/placeholder.png";
-    const title = "Cat"
-    const tech_stacks = []
+const ProjectCard = ({image_src, title, subtitle, body}) => {
 
     return (
         <div className="project-card">
             <div className="image-container">
-                <img src={image_path} />
+                <img src={image_src} />
             </div>
             <div className="card-info">
-                <h1 className="heading">Lorem Ipsum</h1>
-                <h2 className="subtitle">Veni Vidi Vici</h2>
-                <p className="body">{body}</p>
+                <h1>{title}</h1>
+                <h2 >{subtitle}</h2>
+                <p>{body}</p>
             </div>
-            <div className="buttons-container">
-                <button onClick={() => {console.log("hello")}} className="primary-btn">Read More &gt;</button>
-
+            <div className="details-container">
+                <Link to="/projects">Read More</Link>
+                {/* <button onClick={() => {console.log("hello")}} className="primary-btn">Read More &gt;</button> */}
             </div>
         </div>
 
