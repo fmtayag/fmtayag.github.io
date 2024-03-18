@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ProjectDetails = () => {
     const [data, setData] = useState(null);
+    const navigate = useNavigate();
 
     const { id } = useParams();
     fetch('http://localhost:8000/projects/' + id)
         .then(res => {
             if (!res.ok) {
+                navigate("/404");
                 throw Error("Could not fetch data");
             }
             else {
@@ -21,7 +23,7 @@ const ProjectDetails = () => {
         .catch(err => {
             console.log(err);
         });
-    
+
 
     return (
         <div className="project-details">
