@@ -1,7 +1,7 @@
 import '../styles/ProjectCard.css';
 import { Link } from 'react-router-dom';
 
-const ProjectCard = ({image_src, title, subtitle, body}) => {
+const ProjectCard = ({id, image_src, title, subtitle, body}) => {
 
     return (
         <div className="project-card">
@@ -14,7 +14,7 @@ const ProjectCard = ({image_src, title, subtitle, body}) => {
                 <p>{body}</p>
             </div>
             <div className="details-container">
-                <Link to="/projects">Read More</Link>
+                <Link to={`/projects/${id}`}>Read More</Link>
                 {/* <button onClick={() => {console.log("hello")}} className="primary-btn">Read More &gt;</button> */}
             </div>
         </div>
