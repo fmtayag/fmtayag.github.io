@@ -14,7 +14,7 @@ const ProjectDetails = () => {
             .then(res => {
                 if (!res.ok) {
                     navigate("/404");
-                    throw Error("Could not fetch data");
+                    throw Error("Could not fetch data");    
                 }
                 else {
                     return res.json();
@@ -44,7 +44,6 @@ const ProjectDetails = () => {
             }
             )
             .then(data => {
-                console.log("hello");
                 setProject(data);
             })
             .catch(err => {
@@ -54,7 +53,7 @@ const ProjectDetails = () => {
 
     useEffect(() => {
         if (data != null) {
-            navigate("/projects/" + data[currentIndex].id);
+            navigate("/projects/" + data[currentIndex]?.id);
         }
     }, [currentIndex]);
 
