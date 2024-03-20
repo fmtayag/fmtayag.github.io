@@ -10,24 +10,11 @@ const ProjectsList = () => {
     useEffect(() => {
         fetch(url)
             .then(res => {
-                if (!res.ok) {
-                    throw Error("Could not fetch data");
-                }
-                else {
-                    return res.json();
-                }
-            }
-            )
-            .then(data => {
-                data.forEach((object) => {
-                    console.log(object.id);
-                })
-
-                setData(data);
+                if (!res.ok) { throw Error("Could not fetch data"); }
+                else { return res.json(); }
             })
-            .catch(err => {
-                console.log(err);
-            });
+            .then(data => { setData(data); })
+            .catch(err => { console.log(err); });
     }, [url])
 
 
@@ -43,7 +30,7 @@ const ProjectsList = () => {
                                 image_src={object.thumbnail}
                                 title={object.title}
                                 subtitle={object.subtitle}
-                                body={object.body}
+                                summary={object.summary}
                             />
                         );
                     })
