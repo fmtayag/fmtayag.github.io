@@ -4,19 +4,11 @@ import Slideshow from "../components/Slideshow";
 
 const ProjectDetails = () => {
     const [data, setData] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(1);
-    const initialId = useParams().id;
+    const [project, setProject] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const { id } = useParams();
     const navigate = useNavigate();
-    let projectNotFound = currentIndex == -1;
 
-    // This was done to fix the component not re-rendering properly when the browser's back and next buttons are clicked
-    useEffect(() => {
-        if (data != null) {
-            setCurrentIndex(data.findIndex(x => x.id == initialId));
-        }
-    }, [initialId]);
-
-    // Fetch data
     useEffect(() => {
         fetch('http://localhost:8000/projects/')
             .then(res => {
@@ -31,55 +23,65 @@ const ProjectDetails = () => {
             )
             .then(data => {
                 setData(data);
-                setCurrentIndex(data.findIndex(obj => obj.id == initialId)); // Will return -1 if findIndex fails
+                setProject(data.find(obj => obj.id == id));
+                setCurrentIndex(data.findIndex(obj => obj.id == id));
             })
             .catch(err => {
                 console.log(err);
             });
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        fetch('http://localhost:8000/projects/' + id)
+            .then(res => {
+                if (!res.ok) {
+                    navigate("/404");
+                    throw Error("Could not fetch data");
+                }
+                else {
+                    return res.json();
+                }
+            }
+            )
+            .then(data => {
+                console.log("hello");
+                setProject(data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    }, [id]);
+
+    useEffect(() => {
+        if (data != null) {
+            navigate("/projects/" + data[currentIndex].id);
+        }
+    }, [currentIndex]);
 
     function handlePrevious() {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-            navigate("/projects/" + data[currentIndex - 1].id);
-        }
-        else {
-            setCurrentIndex(data.length - 1);
-            navigate("/projects/" + data[0].id);
-        }
+        if (currentIndex > 0) { setCurrentIndex(currentIndex - 1); }
+        else { setCurrentIndex(data.length - 1); }
 
     }
     function handleNext() {
-        if (currentIndex < data.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-            navigate("/projects/" + data[currentIndex + 1].id);
-        }
-        else {
-            setCurrentIndex(0);
-            navigate("/projects/" + data[data.length - 1].id);
-        }
+        if (currentIndex < data.length - 1) { setCurrentIndex(currentIndex + 1); }
+        else { setCurrentIndex(0); }
     }
 
-    if (projectNotFound) {
-        navigate("/404");
-    }
-    else {
-        return (
-            <div className="project-details">
-                <Slideshow />
-                {data && (
-                    <article>
-                        <h1>{data[currentIndex].title}</h1>
-                        <button onClick={handlePrevious}>Previous</button>
-                        <button onClick={handleNext}>Next</button>
-                        <p>{data[currentIndex].body}</p>
-                    </article>
-                )}
+    return (project &&
+        <div className="project-details">
+            <Slideshow />
+            {project && (
+                <article>
+                    <h1>{project.title}</h1>
+                    <button onClick={handlePrevious}>Previous</button>
+                    <button onClick={handleNext}>Next</button>
+                    <p>{project.body}</p>
+                </article>
+            )}
 
-            </div>
-        );
-    }
-
+        </div>
+    );
 }
 
 export default ProjectDetails;

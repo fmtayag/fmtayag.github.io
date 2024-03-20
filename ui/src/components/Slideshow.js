@@ -14,10 +14,10 @@ const Slideshow = () => {
         "/images/placeholder-3.png",
     ];
 
-    function makeSlides(image) {
+    function makeSlides(image, index) { // Note: 'index' is provided by Array.map() callback
         return (
-            <div className="slide fade">
-                <img src={image} />
+            <div className="slide fade" key={index}>
+                <img src={image}/>
             </div>
         );
     }
@@ -27,7 +27,6 @@ const Slideshow = () => {
             slide.classList.add("none");
         })
         Array.from(slides)[slideIndex].classList.remove("none");
-        console.log(slides);
     }
 
     function handlePrev() {
@@ -40,7 +39,6 @@ const Slideshow = () => {
         slideIndex++;
         if (slideIndex > slides.length - 1) { slideIndex = 0 }
         showSlides()
-        console.log(slideIndex);
     }
 
     useEffect(() => {
@@ -50,8 +48,8 @@ const Slideshow = () => {
     return (
         <div className="slideshow">
             {images.map(makeSlides)}
-            <a class="prev" onClick={handlePrev}>❮</a>
-            <a class="next" onClick={handleNext}>❯</a>
+            <a className="prev" onClick={handlePrev}>❮</a>
+            <a className="next" onClick={handleNext}>❯</a>
             {/* <p class="caption">Caption 1 TODO</p> */}
         </div>
     );
