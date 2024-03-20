@@ -1,11 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import Slideshow from "../components/Slideshow";
 
 const ProjectDetails = () => {
     const [data, setData] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(1);
     const initialId = useParams().id;
     const navigate = useNavigate();
+    let projectNotFound = currentIndex == -1;
 
     // This was done to fix the component not re-rendering properly when the browser's back and next buttons are clicked
     useEffect(() => {
@@ -14,6 +16,7 @@ const ProjectDetails = () => {
         }
     }, [initialId]);
 
+    // Fetch data
     useEffect(() => {
         fetch('http://localhost:8000/projects/')
             .then(res => {
@@ -41,7 +44,8 @@ const ProjectDetails = () => {
             navigate("/projects/" + data[currentIndex - 1].id);
         }
         else {
-            // TODO
+            setCurrentIndex(data.length - 1);
+            navigate("/projects/" + data[0].id);
         }
 
     }
@@ -51,11 +55,10 @@ const ProjectDetails = () => {
             navigate("/projects/" + data[currentIndex + 1].id);
         }
         else {
-            // TODO
+            setCurrentIndex(0);
+            navigate("/projects/" + data[data.length - 1].id);
         }
     }
-
-    let projectNotFound = currentIndex == -1;
 
     if (projectNotFound) {
         navigate("/404");
@@ -63,6 +66,7 @@ const ProjectDetails = () => {
     else {
         return (
             <div className="project-details">
+                <Slideshow />
                 {data && (
                     <article>
                         <h1>{data[currentIndex].title}</h1>
