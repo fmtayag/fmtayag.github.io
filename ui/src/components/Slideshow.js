@@ -1,18 +1,11 @@
 import { useEffect } from 'react';
 import '../styles/Slideshow.css';
 
-const Slideshow = () => {
+const Slideshow = ({images}) => {
     // controllers
     let slideIndex = 0;
-    let slides;
+    let slides; 
     slides = document.getElementsByClassName("slide");
-
-    // dummy data
-    const images = [
-        "/images/placeholder-1.png",
-        "/images/placeholder-2.png",
-        "/images/placeholder-3.png",
-    ];
 
     function makeSlides(image, index) { // Note: 'index' is provided by Array.map() callback
         return (
@@ -43,7 +36,7 @@ const Slideshow = () => {
 
     useEffect(() => {
         showSlides();
-    }, [slides])
+    }, [slides, images])
 
     return (
         <div className="slideshow">

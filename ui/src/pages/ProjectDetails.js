@@ -69,7 +69,8 @@ const ProjectDetails = () => {
 
     return (project &&
         <div className="project-details">
-            <Slideshow />
+
+            <Slideshow images={project.images} />
             {project && (
                 <article>
                     <h1>{project.title}</h1>

@@ -5,7 +5,11 @@
             "thumbnail": "/images/placeholder-1.png",
             "subtitle": "Lorem ipsum dolor",
             "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-            "slides": [],
+            "images": [
+                "/images/cat1.png",
+                "/images/placeholder-2.png",
+                "/images/placeholder-3.png"
+            ],
             "techs": [
                 "javascript", "firebase"
             ],
@@ -17,7 +21,11 @@
             "thumbnail": "/images/placeholder-2.png",
             "subtitle": "Lorem ipsum dolor",
             "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-            "slides": [],
+            "images": [
+                "/images/placeholder-1.png",
+                "/images/cat1.png",
+                "/images/placeholder-3.png"
+            ],
             "techs": [
                 "javascript", "firebase"
             ],
@@ -29,7 +37,11 @@
             "thumbnail": "/images/placeholder-3.png",
             "subtitle": "Lorem ipsum dolor",
             "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-            "slides": [],
+            "images": [
+                "/images/placeholder-1.png",
+                "/images/placeholder-2.png",
+                "/images/placeholder-3.png"
+            ],
             "techs": [
                 "javascript", "firebase"
             ],
@@ -41,7 +53,11 @@
             "thumbnail": "/images/placeholder-1.png",
             "subtitle": "Lorem ipsum dolor",
             "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-            "slides": [],
+            "images": [
+                "/images/cat1.png",
+                "/images/placeholder-2.png",
+                "/images/placeholder-3.png"
+            ],
             "techs": [
                 "javascript", "firebase"
             ],
