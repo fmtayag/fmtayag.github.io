@@ -1,0 +1,35 @@
+/* For debugging only */
+/* * { outline: 1px solid #e6e3db; }  */
+
+:root {
+  --color1: silver; 
+  --color2: gray; 
+  --black: #11113D;
+  --white: #FFFFFF;
+  /* --white: #F6F6F6; */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('ttf');
+}
+
+body {
+  background-color: var(--white);
+  letter-spacing: 0.2px;
+  margin: 0;
+  font-family: 'Roboto';
+} 
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:visited {
+  color: var(--black);
+}
+
+a:hover:not(.logo) {
+  color: var(--color1);
+}
