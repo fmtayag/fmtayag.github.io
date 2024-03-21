@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const ProjectsList = () => {
 
     const [data, setData] = useState(null);
-    const url = "http://localhost:8000/projects/"
+    const url = process.env.REACT_APP_SERVER_URL + "/projects/";
 
     useEffect(() => {
         fetch(url)

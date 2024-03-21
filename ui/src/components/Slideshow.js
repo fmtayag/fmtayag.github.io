@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import '../styles/Slideshow.css';
 
 const Slideshow = ({images}) => {
-    // controllers
     let slideIndex = 0;
     let slides; 
     slides = document.getElementsByClassName("slide");

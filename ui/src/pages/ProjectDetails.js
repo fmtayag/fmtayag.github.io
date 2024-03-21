@@ -10,7 +10,7 @@ const ProjectDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:8000/projects/')
+        fetch(process.env.REACT_APP_SERVER_URL + "/projects/")
             .then(res => {
                 if (!res.ok) {
                     navigate("/404");
