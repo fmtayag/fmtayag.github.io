@@ -1,24 +1,42 @@
 ---
-let isToggled = false;
-// let linksClass = "links";
+
 ---
 
 <style>
     @import '@styles/navbar.css';
 </style>
 
+
+<script>
+    let isToggled = false;
+    let checkbox = document.getElementById("checkbox");
+    let hamburger = document.getElementById("hamburger");
+    let links = document.getElementById("links");
+    hamburger.classList.add(isToggled ? 'toggled' : 'untoggled');
+    isToggled ? () => links.classList.remove("hide") : links.classList.add("hide");
+
+    checkbox.addEventListener('click', () => {
+        isToggled = isToggled ? false : true; 
+
+        hamburger.classList.remove('toggled');
+        hamburger.classList.remove('untoggled');
+        hamburger.classList.add(isToggled ? 'toggled' : 'untoggled');
+        isToggled ? links.classList.remove("hide") : links.classList.add("hide");
+        console.log(isToggled);
+    })
+</script>
+
 <div class="navbar sticky">
     <div class="logo-container">
         <a href="/" class="logo">Francis Tayag</a>
     </div>
-
-    <div class="links">
-        <a href="/projects">Projects</href>
+    
+    <div class="hamburger" id="hamburger">
+        <input id="checkbox" type="checkbox" />
     </div>
     
-    <!-- <div class={"hamburger " + (isToggled ? 'toggled' : 'untoggled')}>
-        <input type="checkbox" onclick={() => setToggle(isToggled ? false : true)} />
-    </div> -->
-
+    <div class="links" id="links">
+        <a href="/projects">Projects</href>
+    </div>
 
 </div>

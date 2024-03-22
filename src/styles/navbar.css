@@ -3,6 +3,7 @@
     justify-content: space-between;
     z-index: 1;
     background-color: var(--white);
+    box-shadow: 0 0 3px 1px var(--color1);
     /* background-color: red; */
 }
 
@@ -95,7 +96,7 @@
 
 /* ----- Hamburger Menu ----- */
 
-/* .hamburger {
+.hamburger {
     display: none;
     max-width: 32px;
     max-height: 32px;
@@ -124,4 +125,4 @@ input[type=checkbox] {
         display: flex;
         align-self: center;
     }
-} */
+}
