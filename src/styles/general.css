@@ -1,5 +1,5 @@
 /* For debugging only */
-/* * { outline: 1px solid #e6e3db; }  */
+* { outline: 1px solid #e6e3db; } 
 
 :root {
   --color1: silver; 
@@ -24,6 +24,7 @@ body {
 a {
   text-decoration: none;
   font-weight: 500;
+  color: var(--black);
 }
 
 a:visited {

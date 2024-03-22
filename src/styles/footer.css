@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1em;
+}
+
+.footer div:nth-child(2)>p {
+    display: inline-block;
+    padding-inline: 1rem;
+}
