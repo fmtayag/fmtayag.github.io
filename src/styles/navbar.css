@@ -19,6 +19,9 @@
 .logo-container {
     align-content: center;
 }
+.logo-container > a {
+    padding: 0 1em;
+}
 
 .navbar #links {
     display: flex;
