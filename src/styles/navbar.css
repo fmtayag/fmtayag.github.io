@@ -20,7 +20,7 @@
     align-content: center;
 }
 
-.navbar .links {
+.navbar #links {
     display: flex;
     justify-content: flex-end;
 }
@@ -32,7 +32,7 @@
         padding: 0;
     }
 
-    .navbar>.links {
+    .navbar>#links {
         display: flex;
         justify-content: center;
     }
@@ -42,7 +42,7 @@
         justify-content: center;
         text-align: center;
     }
-    .links {
+    #links {
         animation: linkFade ease-in 0.3s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
@@ -64,7 +64,7 @@
     
 }
 
-.logo {
+.logo-container > a {
     font-weight: 650;
     float: left;
     position: relative;
@@ -72,7 +72,7 @@
     letter-spacing: 2px;
 }
 
-.logo::before {
+.logo-container > a::before {
     content: "";
     position: absolute;
     left: 0;
@@ -83,20 +83,20 @@
     background: color-mix(in srgb, var(--color1) 50%, transparent);
 }
 
-.logo:hover::before {
+.logo-container > a:hover::before {
     top: 2;
     left: 2;
     height: 100%;
 }
 
-.navbar>.links a {
+.navbar>#links a {
     padding-inline: 1.5rem;
 }
 
 
 /* ----- Hamburger Menu ----- */
 
-.hamburger {
+#hamburger {
     display: none;
     max-width: 32px;
     max-height: 32px;
@@ -121,7 +121,7 @@ input[type=checkbox] {
 }
 
 @media only screen and (max-width: 640px) {
-    .hamburger {
+    #hamburger {
         display: flex;
         align-self: center;
     }
