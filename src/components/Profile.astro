@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import asideImage from '@images/placeholder-1.png';
+
+import * as myProfile from '@content/profile/text.md';
 ---
 
 <style>
@@ -9,8 +11,8 @@ import asideImage from '@images/placeholder-1.png';
 
 <div class="profile">
     <div class="introduction">
-        <h1>Hi, I'm Francis.</h1>
-        <p>I'm a full-stack web developer, pixel artist, and writer.</p>
+        <h1>{myProfile.frontmatter.title}</h1>
+        <p>{myProfile.frontmatter.subtitle}</p>
         <div class="links">
             <a href="/">My Projects</a>
             <a href="/">About Me</a>

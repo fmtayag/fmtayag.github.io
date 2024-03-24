@@ -1,9 +1,9 @@
 .navbar {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     justify-content: space-between;
     z-index: 1;
     background-color: var(--white);
-    box-shadow: 0 0 3px 1px var(--color1);
+    /* box-shadow: 0 0 3px 1px var(--color1); */
     /* background-color: red; */
 }
 
@@ -13,8 +13,13 @@
 
 .sticky {
     position: fixed;
-    width: 100vw;
+    top: 0;
+    width: 100%;    
 }
+
+/* .sticky div {
+    margin-top: 0;
+} */
 
 .logo-container {
     align-content: center;

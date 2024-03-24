@@ -19,9 +19,23 @@
         isToggled ? links.classList.remove("hide") : links.classList.add("hide");
         console.log(isToggled);
     })
+
+    window.onscroll = function() {myFunction()};
+
+    // Sticky navbar
+    let navbar = document.getElementById("navbar");
+    let top = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.scrollY >= top) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
 </script>
 
-<div class="navbar sticky">
+<div class="navbar" id="navbar">
     <div class="logo-container">
         <a href="/">Francis Tayag</a>
     </div>

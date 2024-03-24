@@ -34,3 +34,8 @@ a:visited {
 a:hover:not(.logo) {
   color: var(--color1);
 }
+
+/* For navbar */
+/* .sticky + div {
+    padding-top: 3.4rem;  
+} */
