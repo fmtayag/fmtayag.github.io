@@ -1,0 +1,8 @@
+.project-details {
+    height: 100vh;
+    margin: 4em;
+}
+
+article > h1 {
+    text-align: center;
+}

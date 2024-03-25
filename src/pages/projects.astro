@@ -3,18 +3,22 @@ import Layout from '@layouts/Layout.astro';
 import ProjectCard from '@components/ProjectCard.astro';
 
 import '@styles/projects.css';
-const projects = await Astro.glob('@content/projects/**/*.md')
+import { getCollection } from 'astro:content';
+// const projects = await Astro.glob('@content/projects/**/*.md')
+const projectEntries = await getCollection('projects');
+
 
 ---
 
 <Layout title="Projects">
     <div class="projects">
         <div class="container">
-            {projects.map(project => 
+            {projectEntries.map(entry => 
                 <ProjectCard 
                     thumbnail="../src/images/placeholder-1.png" 
-                    title={project.frontmatter.title}
-                    description={project.frontmatter.description}
+                    title={entry.data.title}
+                    description={entry.data.description}
+                    id={entry.slug}
                 />
                 // <project.Content />
             )}
