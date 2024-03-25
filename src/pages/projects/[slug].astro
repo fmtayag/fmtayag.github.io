@@ -5,15 +5,33 @@ import '@styles/project_details.css';
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection('projects');
+  return projectEntries.map((entry, index) => {
+    // -- For pathing purposes
+    // Get previous and next indices relative to the current index
+    const len = projectEntries.length;
+    const isFirstEntry = index == 0 ;
+    const isLastEntry = index == len - 1;
+    
+    const prevIndex = isFirstEntry ? len - 1 : index - 1;
+    const nextIndex = isLastEntry ? 0 : index + 1;
 
-  return projectEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }))
+    // Get slugs
+    const prevSlug = projectEntries[prevIndex].slug;
+    const nextSlug = projectEntries[nextIndex].slug;
+
+    // console.log(prevSlug + " < " + entry.slug + " > " + nextSlug);
+
+    return {
+      params: { slug: entry.slug }, props: { entry, prevSlug, nextSlug },
+    }
+  })
 
 }
 
-const { entry } = Astro.props;
+const { entry, prevSlug, nextSlug } = Astro.props;
 const { Content } = await entry.render();
+
+// console.log(projectEntries.findIndex(findPos));
 
 ---
 
@@ -23,6 +41,10 @@ const { Content } = await entry.render();
 
     <article>
       <h1>{entry.data.title}</h1>
+      <a href=`/projects/${prevSlug}`>Previous</a>
+      <a href=`/projects/${nextSlug}`>Next</a>
+      <!-- <a href={`/projects/${}`}>Previous</a>
+      <a href={`/projects/${}`}>Next</a> -->
       <!-- <button onClick={handlePrevious}>Previous</button>
       <button onClick={handleNext}>Next</button> -->
       <Content />
