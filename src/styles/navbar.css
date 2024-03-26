@@ -55,7 +55,7 @@
 
     @keyframes toLeft {
         from { transform: translateX(0); }
-        to { transform: translateX(-150%); display: none; }
+        to { transform: translateX(-200%); }
     }
 
     @keyframes containerAnimation {     
@@ -75,18 +75,18 @@
         position: absolute;
         width: 100%;
         z-index: 1;
-        background-color: var(--white);
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        animation: containerAnimation 1s forwards; /* Fix for toLeft animation playing on page load */
+        animation: containerAnimation 1s forwards; /* Fixes the toLeft animation playing on page load */
     }
     #responsive.hide a {
         animation: toLeft 0.4s ease-in, hasHovered 1ms paused;
         animation-fill-mode: forwards;
     }
     #responsive a {
+        background-color: var(--white);
         padding: 1em;
         text-align: center;
         animation: fromLeft 0.4s ease-in;
