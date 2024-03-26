@@ -4,48 +4,55 @@
 
 <script>
     let isToggled = false;
-    let checkbox = document.getElementById("checkbox");
-    let hamburger = document.getElementById("hamburger");
-    let links = document.getElementById("links");
-    hamburger.classList.add(isToggled ? 'toggled' : 'untoggled');
-    isToggled ? () => links.classList.remove("hide") : links.classList.add("hide");
-
+    const navbar = document.getElementById("navbar");
+    const hamburger = document.getElementById("hamburger");
+    const checkbox = document.getElementById("checkbox");
+    const responsive = document.getElementById("responsive");
+    
     checkbox.addEventListener('click', () => {
-        isToggled = isToggled ? false : true; 
+        isToggled = isToggled ? false : true;
+        isToggled ? responsive.classList.remove("hide") : responsive.classList.add("hide");
+        console.log(responsive.classList);
 
-        hamburger.classList.remove('toggled');
-        hamburger.classList.remove('untoggled');
-        hamburger.classList.add(isToggled ? 'toggled' : 'untoggled');
-        isToggled ? links.classList.remove("hide") : links.classList.add("hide");
-        console.log(isToggled);
     })
+    
+    // // Sticky navbar
+    // window.onscroll = function() {myFunction()};
 
-    window.onscroll = function() {myFunction()};
+    // let navbar = document.getElementById("navbar");
+    // let top = navbar.offsetTop;
 
-    // Sticky navbar
-    let navbar = document.getElementById("navbar");
-    let top = navbar.offsetTop;
-
-    function myFunction() {
-        if (window.scrollY >= top) {
-            navbar.classList.add("sticky");
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
+    // function myFunction() {
+    //     if (window.scrollY >= top) {
+    //         navbar.classList.add("sticky");
+    //     } else {
+    //         navbar.classList.remove("sticky");
+    //     }
+    // }
 </script>
 
 <div class="navbar" id="navbar">
-    <div class="logo-container">
-        <a href="/">Francis Tayag</a>
-    </div>
+    <div id="normal">
+        <div id="logo">
+            <a href="/">Francis Tayag</a>
+        </div>
     
-    <div id="hamburger">
-        <input id="checkbox" type="checkbox" />
-    </div>
+        <div id="links">
+            <a href="/">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/">Services</a>   
+            <a id="contact" href="/contact">Contact</a>
+        </div>
     
-    <div id="links">
-        <a href="/projects">Projects</href>
+        <div class="hamburger" id="hamburger">
+            <input id="checkbox" type="checkbox" />
+        </div>
+    </div>
+    <div id="responsive" class="hide">
+        <a href="/">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/">Services</a>   
+        <a href="/contact">Contact</a>
     </div>
 
 </div>

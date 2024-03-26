@@ -1,5 +1,5 @@
 /* For debugging only */
-* { outline: 1px solid #e6e3db; } 
+/* * { outline: 1px solid #e6e3db; }   */
 
 :root {
   --color1: silver; 
@@ -11,14 +11,17 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/Roboto-Regular.ttf') format('ttf');
+  src: url('/fonts/VarelaRound-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
   background-color: var(--white);
   letter-spacing: 0.2px;
   margin: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 } 
 
 a {
