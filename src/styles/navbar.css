@@ -5,7 +5,7 @@
     /* position: fixed;
     width: 100%; */
 
-    font-size: 1.25em;
+    font-size: 1.3em;
 }
 
 #normal {
@@ -58,6 +58,12 @@
         to { transform: translateX(-150%); display: none; }
     }
 
+    @keyframes containerAnimation {     
+        0% {  opacity: 0; }     
+        99% {  opacity: 0; }     
+        100% { opacity: 1; } 
+    }
+
     #links {
         display: none;
     } 
@@ -73,9 +79,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        animation: containerAnimation 1s forwards; /* Fix for toLeft animation playing on page load */
     }
     #responsive.hide a {
-        animation: toLeft 0.4s ease-in;
+        animation: toLeft 0.4s ease-in, hasHovered 1ms paused;
         animation-fill-mode: forwards;
     }
     #responsive a {
