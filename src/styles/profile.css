@@ -1,17 +1,109 @@
-.profile {
+.page {
+    height: 100vh;
+    font-size: 1.25em;
+}
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    
+    height: 70vh;
+
     animation: fadeInFromLeft ease-in 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    /* border: 5px solid red; */
 }
 
-@keyframes fadeInFromLeft {
+.introduction {
+    /* align-self: auto; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-basis: 30em;
+    margin-inline: 2em;
+}
+
+.introduction p:nth-child(1) {
+    font-size: 1.25em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+
+    color: #9CA3AF;
+
+    display: inline;
+    margin: 0;
+}
+
+.introduction p:nth-child(2) {
+    font-size: 1.75em;
+    font-weight: 600;
+    text-align: left;
+
+    margin: 0;
+}
+
+.introduction p:nth-child(3) {
+    margin-top: 2em;
+    margin-bottom: 0;
+    font-size: 1em;
+    line-height: 1.5em;
+
+    color: #9CA3AF;
+}
+
+.links {
+    margin-top: 1em;
+}
+
+.links a {
+    display: inline-block;
+    background-color: var(--white);
+
+    /* border-radius: 0.25em; */
+    border: 1px solid var(--white);
+
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-top: 1em;
+    padding-inline: 2em;
+    padding-top: 0.55em;
+    padding-bottom: 0.55em;
+
+    -webkit-transition: background-color .3s ease-in;
+    -ms-transition: background-color .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.links a.primary {
+    background-color: var(--color1);
+    color: white;
+    /* box-shadow: 3px 3px rgb(103, 174, 255); */
+}
+
+.links a.icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.links a.icon {
+    margin: 0;
+    padding: 0;
+}
+
+
+.links a:hover:not(.highlight) {
+    /* background-color: var(--black); */
+    -webkit-transition: background-color .3s ease-in;
+    -ms-transition: background-color .3s ease-in;
+    transition: all .3s ease-in;
+    border: 1px solid var(--black);
+    /* color: var(--white); */
+}
+
+/* @keyframes fadeInFromLeft {
     0% {
         transform: translateX(-20px);
         opacity: 0;
@@ -21,19 +113,7 @@
         transform: translateX(0);
         opacity: 1;
     }
-}
-
-.profile>div {
-    margin-inline: 3vmin;
-}
-
-.profile>.introduction {
-    /* align-self: auto; */
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
+} */
 
 .picture-container>img {
     width: 25vw;
@@ -41,60 +121,8 @@
     /* border-radius: 50%; */
 }
 
-.introduction>h1 {
-    font-size: 3rem;
-    display: inline;
-    /* border: 1px solid black; */
-    text-align: left;
-    margin: 0;
-}
-
-.introduction > p {
-    color: #9CA3AF;
-    font-size: 2rem;
-    /* border: 1px solid black; */
-    text-align: left;
-    margin: 0;
-}
-
-.links {
-    margin-top: 1em;
-}
-
-.links a:nth-child(1) {
-    margin-left: 0;
-}
-
-.links a {
-    display: inline-block;
-    border: 1px solid var(--color1);
-    background-color: var(--white);
-    width: 15vw;
-
-    text-align: center;
-    font-size: 1.2rem;
-
-    margin-inline: 0.5em;
-    margin-top: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-
-    -webkit-transition: background-color .3s ease-in;
-    -ms-transition: background-color .3s ease-in;
-    transition: all .3s ease-in;
-}
-
-.links a:hover {
-    background-color: var(--black);
-    -webkit-transition: background-color .3s ease-in;
-    -ms-transition: background-color .3s ease-in;
-    transition: all .3s ease-in;
-    border-color: var(--black);
-    color: var(--white);
-}
-
-@media only screen and (max-width: 640px) {
-    .profile {
+@media only screen and (max-width: 768px) {
+    .container {
         flex-direction: column;
         justify-content: flex-start;
         margin: 0;
@@ -103,26 +131,28 @@
     .introduction {
         order: 2;
         align-items: center;
-        margin: 0;
+        margin-top: 0.5em;
+        margin-inline: 0;
     }
 
-    .introduction>h1 {
-        font-size: 2rem;
+    .introduction > p:nth-child(1) {
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    .introduction > p:nth-child(2) {
+        font-size: 1.8em;
         text-align: center;
         margin: 1vh 0;
     }
 
-    .introduction>p {
-        font-size: 1.5rem;
+    .introduction > p:nth-child(3) {
+        font-size: 1em;
         text-align: center;
     }
 
     .picture-container {
         order: 1;
-    }
-    
-    .links a:nth-child(1) {
-        margin-left: 0.5em;
     }
 
     .links > a {
@@ -131,7 +161,6 @@
     }
 
     .picture-container img {
-        margin-top: 10vh;
-        width: 15em;
+        width: 12em;
     }
 }

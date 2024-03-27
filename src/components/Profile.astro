@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import asideImage from '@images/placeholder-1.png';
+import placeholdSocialImage from '@images/facebook.png';
 
 import * as myProfile from '@content/profile/text.md';
 ---
@@ -9,17 +10,22 @@ import * as myProfile from '@content/profile/text.md';
     @import '@styles/profile.css';
 </style>
 
-<div class="profile">
-    <div class="introduction">
-        <h1>{myProfile.frontmatter.title}</h1>
-        <p>{myProfile.frontmatter.subtitle}</p>
-        <div class="links">
-            <a href="/">My Projects</a>
-            <a href="/">About Me</a>
+<div class="page">
+    <div class="container">
+        <div class="introduction">
+            <p>Hi! I'm Francis Tayag,</p>
+            <p>A Frontend Web Developer</p>
+            <p>I design and develop simple but elegant websites. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="links">
+                <a class="primary" href="/">Contact</a>
+                <a class="tertiary" href="/">About Me</a>
+            </div>
+
+        </div>
+    
+        <div class="picture-container">
+            <Image src={asideImage} alt="Aside" />
         </div>
     </div>
-
-    <div class="picture-container">
-        <Image src={asideImage} alt="Aside" />
-    </div>
+    
 </div>
