@@ -1,6 +1,5 @@
 .page {
     height: 100vh;
-    font-size: 1.25em;
 }
 
 .container {
@@ -8,7 +7,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80%;
 
     animation: fadeInFromLeft ease-in 0.5s;
     animation-iteration-count: 1;
@@ -168,6 +167,10 @@
     .links > a {
         display: block;
         width: 40vw;
+    }
+
+    .links > a:last-child {
+        margin-bottom: 1.5em;
     }
 
     .picture-container img {
