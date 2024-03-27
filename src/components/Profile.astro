@@ -1,7 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import asideImage from '@images/placeholder-1.png';
-import placeholdSocialImage from '@images/facebook.png';
+import social1 from '@images/linkedin.png';
+import social2 from '@images/behance.png';
 
 import * as myProfile from '@content/profile/text.md';
 ---
@@ -13,12 +14,24 @@ import * as myProfile from '@content/profile/text.md';
 <div class="page">
     <div class="container">
         <div class="introduction">
-            <p>Hi! I'm Francis Tayag,</p>
-            <p>A Frontend Web Developer</p>
+            <p>Hi! I'm Francis,</p>
+            <p>Frontend Web Developer</p>
             <p>I design and develop simple but elegant websites. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <div class="links">
                 <a class="primary" href="/">Contact</a>
                 <a class="tertiary" href="/">About Me</a>
+            </div>
+            <div class="socials">
+                <div>
+                    <a href="/">
+                        <Image src={social1} alt="Social" />
+                    </a>
+                </div>
+                <div>
+                    <a href="/">
+                        <Image src={social2} alt="Social" />
+                    </a>
+                </div>
             </div>
 
         </div>

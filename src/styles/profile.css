@@ -45,7 +45,7 @@
 }
 
 .introduction p:nth-child(3) {
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 0;
     font-size: 1em;
     line-height: 1.5em;
@@ -83,16 +83,26 @@
     /* box-shadow: 3px 3px rgb(103, 174, 255); */
 }
 
-.links a.icon img {
-    width: 32px;
-    height: 32px;
+.socials {
+    display: inherit;
+    justify-content: flex-end;
 }
 
-.links a.icon {
-    margin: 0;
-    padding: 0;
+.socials div:not(:last-child) {
+    padding-inline-end: 0.5em;
+}
+.socials a {
+    width: fit-content;
+    height: fit-content;
+}
+.socials a:hover {
+    opacity: 50%;
 }
 
+.socials a img {
+    width: 1.75em;
+    height: auto;
+}   
 
 .links a:hover:not(.highlight) {
     /* background-color: var(--black); */
