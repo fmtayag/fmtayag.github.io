@@ -1,7 +1,8 @@
 ---
 title: 'First Project'
-subtitle: 'Web Page'
-description: 'My first project'
+years: '2022 - 2023'
+summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida arcu non tempus placerat. Vivamus at diam ultricies, ornare nisi ac, consectetur sem.'
+techs: ['Django', 'Python', 'Firebase']
 ---
 ## Lorem
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida arcu non tempus placerat. Vivamus at diam ultricies, ornare nisi ac, consectetur sem. Mauris ac nulla tempus dolor vehicula bibendum. Aliquam eget interdum nisl, porttitor ullamcorper nulla. Cras commodo dictum egestas. Nullam molestie, eros dictum consequat tristique, ligula velit condimentum sem, non consectetur mi ipsum ut nunc. Pellentesque tincidunt nibh non ligula faucibus mollis. Suspendisse laoreet purus in risus condimentum volutpat.

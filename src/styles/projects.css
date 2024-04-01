@@ -1,29 +1,58 @@
-.page {
-    height: auto;
+#projects {
+    margin-top: 3em;
 }
 
-#title {
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.container {
+.list-item {
     display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    grid-gap: 0;
-    padding: 0;
+    grid-template-columns: 20% auto;
+    grid-auto-rows: auto;
+}
+
+.year p {
+    margin: 0;
+    font-size: 1.15em;
+}
+
+.list-item:not(:first-child) {
+    margin: 3em auto;
+}
+
+.list-info h3 {
     margin: 0;
 }
 
-@media only screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: auto auto;
-    }
-} 
+.list-info a {
+    font-weight: bolder;
+    transition: color .2s ease-in;
+}
 
-@media only screen and (max-width: 425px) {
-    .container {
-        grid-template-columns: auto;
-    }
+.list-info a::after {
+    content: "\003E";
+    margin-inline: 0.25em;
+    transition: margin .2s ease-in;
+}
+
+.list-info a:hover::after {
+    margin-inline: 0.5em;
+}
+
+#links img {
+    float: right;
+    width: 2em;
+    height: auto;
+}
+
+#techs {
+    margin-top: 0.75em;
+    font-weight: lighter;
+    color: var(--color2);
+}
+
+#techs p {
+    display: inline;
+}
+
+#techs p:not(:last-child):after {
+    content: "\25cf";
+    margin-inline: 0.25em;
 }

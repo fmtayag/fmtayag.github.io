@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+// const projects = await Astro.glob('@content/projects/**/*.md')
+const projectEntries = await getCollection('projects');
+
+// placeholders
+import { Image } from 'astro:assets';
+import social1 from '@images/linkedin.png';
+import social2 from '@images/behance.png';
+import social3 from '@images/github.png';
+---
+
+<style>
+    @import '@styles/projects.css';
+</style>
+
+<div id="projects">
+    <h2 class="wg-lighter">Projects</h1>
+    <div>
+        {projectEntries.map(entry => 
+            <div class="list-item">
+                <div class="year">
+                    <p class="secondary">{entry.data.years}</p>
+                </div>
+                <div class="list-info">
+                    <h3><a href="">{entry.data.title}</a></h3>
+                    <p>{entry.data.summary}</p>
+  
+                    <div id="techs">
+                        {entry.data.techs.map(tech => 
+                            <p>{tech}</p>
+                        )}
+  
+                    </div>
+                </div>
+                
+            </div>
+            // <project.Content />
+        )}
+    </div>
+</div>
