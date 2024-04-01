@@ -86,7 +86,7 @@
         animation: containerAnimation 1s forwards; /* Fixes the toLeft animation playing on page load */
     }
     #responsive.hide a {
-        animation: toLeft 0.4s ease-in, hasHovered 1ms paused;
+        animation: toLeft 0.3s ease-in, hasHovered 1ms paused;
         animation-fill-mode: forwards;
     }
     #responsive a {
@@ -95,18 +95,17 @@
         padding: 0.5em;
         padding-inline-end: 1.5em;
         text-align: right;
-        animation: fromLeft 0.4s ease-in;
+        /* text-align: center; */
+        animation: fromLeft 0.3s ease-in;
         animation-fill-mode: backwards;
     }
+
     /* I acknowledge this is hacky but I don't want to use SASS right now */
-    
     #responsive a:nth-child(1) { animation-delay: 0.1s; } 
     #responsive a:nth-child(2) { animation-delay: 0.2s; }
     #responsive a:nth-child(3) { animation-delay: 0.3s; }
     #responsive a:nth-child(4) { animation-delay: 0.4s; }
 }
-
-
 
 /* ----- Hamburger Menu ----- */
 
