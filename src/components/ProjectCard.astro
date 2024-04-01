@@ -5,16 +5,17 @@ const { thumbnail, title, description, id } = Astro.props;
 ---
 
 
-<div class="project-card">
-    <div class="image-container">
-        <img src={thumbnail} alt="thumbnail"/>
+<div class="card">
+    <img src={thumbnail} alt="thumbnail"/>
+    <div id="overlay">
+        <h1>{title}</h1>
     </div>
-    <div class="card-info">
+    <!-- <div class="card-info">
         <h1>{title}</h1>
         <p>{description}</p>
     </div>
     <div class="details-container">
         <a href={`/projects/${id}`}>Read More</a>
         {/* <button onClick={() => {console.log("hello")}} className="primary-btn">Read More &gt;</button> */}
-    </div>
+    </div> -->
 </div>

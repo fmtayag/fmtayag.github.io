@@ -11,7 +11,8 @@ const projectEntries = await getCollection('projects');
 ---
 
 <Layout title="Projects">
-    <div class="projects">
+    <div class="page">
+        <h1 id="title">Projects</h1>
         <div class="container">
             {projectEntries.map(entry => 
                 <ProjectCard 
