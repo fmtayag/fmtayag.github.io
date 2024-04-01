@@ -18,6 +18,7 @@ const projectEntries = await getCollection('projects');
                 <ProjectCard 
                     thumbnail="../src/images/placeholder-1.png" 
                     title={entry.data.title}
+                    subtitle={entry.data.subtitle}
                     description={entry.data.description}
                     id={entry.slug}
                 />

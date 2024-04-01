@@ -1,34 +1,31 @@
 .card {
-    position: relative;
+    margin: 1em;
 }
 
 img {
     display: block;
-    width: 20vw;
+    margin: 0 auto;
+    max-width: 80%;
     height: auto;
     transition: 0.3s ease-in;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    
+    transition: opacity 0.3s ease-in;
 }
 
-#overlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 0.3s ease-in;
+img:hover {
+    opacity: 0.3;
 }
 
-#overlay h1 {
+h1 {
     text-align: center;
+    margin: 0;
 }
 
-.card:hover img {
-    opacity: 0.2;
+h2 { 
+    text-align: center;
+    color: var(--color2);
+    font-weight: lighter;
+    margin: 0;
 }
-
-.card:hover #overlay {
-    opacity: 1;
-}
-

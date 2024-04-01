@@ -1,5 +1,6 @@
 ---
-title: 'first Project'
+title: 'First Project'
+subtitle: 'Web Page'
 description: 'My first project'
 ---
 ## Lorem

@@ -1,0 +1,16 @@
+.about-me { 
+    margin-top: 3em;
+    margin: 0 auto;
+}
+
+.about-me h1 {
+    text-align: left;
+}
+
+.about-me p {
+    line-height: 1.5em;
+}
+
+#projects {
+    margin-top: 3em;
+}

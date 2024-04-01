@@ -1,5 +1,6 @@
 ---
-title: 'second Project'
+title: 'Second Project'
+subtitle: 'Web Page'
 description: 'My second project'
 
 ---

@@ -1,5 +1,5 @@
 .page {
-    height: 100vh;
+    height: auto;
 }
 
 #title {
@@ -17,11 +17,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-    /* .container {
-        display: block;
+    .container {
+        grid-template-columns: auto auto;
     }
-    .container div {
-        margin: 2em auto;
-        width: 90%;
-    } */
+} 
+
+@media only screen and (max-width: 425px) {
+    .container {
+        grid-template-columns: auto;
+    }
 }

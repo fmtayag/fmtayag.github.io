@@ -1,103 +1,60 @@
-.page {
-    height: 100vh;
-    margin-inline: 1em;
-    font-size: 1.25em;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 85%;
-    gap: 1em;
-
-    animation: fadeInFromLeft ease-in 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-.introduction {
-    /* align-self: auto; */
+#profile {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    flex-basis: 30em;
-    margin-inline: 2em;
 }
 
-.introduction p:nth-child(1) {
-    font-size: 1.5em;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: left;
-
-    color: #9CA3AF;
-
-    display: inline;
-    margin: 0;
+#profile img {
+    max-width: 10em;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
 }
 
-.introduction p:nth-child(2) {
-    font-size: 2em;
-    font-weight: 600;
-    text-align: left;
-
-    margin: 0;
-}
-
-.introduction p:nth-child(3) {
-    margin-top: 1em;
-    margin-bottom: 0;
-    font-size: 1em;
-    line-height: 1.5em;
-
-    color: #9CA3AF;
-}
-
-.links {
-    margin-top: 1em;
-}
-
-.links a {
-    display: inline-block;
-    background-color: var(--white);
-
-    /* border-radius: 0.25em; */
-    border: 1px solid var(--white);
-
+#basic-info { 
+    width: 100%;
+    margin: 1em auto;
     text-align: center;
-    text-transform: uppercase;
-
-    padding-inline: 2em;
-    padding-top: 0.55em;
-    padding-bottom: 0.55em;
-
-    -webkit-transition: background-color .3s ease-in;
-    -ms-transition: background-color .3s ease-in;
-    transition: all .3s ease-in;
 }
 
-.links a.primary {
-    background-color: var(--color1);
-    color: white;
-    /* box-shadow: 3px 3px rgb(103, 174, 255); */
+.title {
+    margin: 0;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.line::before, .line::after {
+    content: '';
+    margin-inline: 2vmin;
+    flex-grow: 1;
+    border-bottom: 1px solid var(--color1);
+}
+
+.subtitle {
+    margin: 0;
+    font-weight: lighter;
+}
+
+.secondary {
+    color: var(--color2);
 }
 
 .socials {
-    margin-top: 0.5em;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .socials div:not(:last-child) {
     padding-inline-end: 0.5em;
 }
 .socials a {
-    display: block;
-    text-align: center;
-    width: fit-content;
-    height: auto;
+    display: inline;
+    float: left;
+    margin-inline: 5px;
+    transition: opacity 0.2s ease-in;
 }
 .socials a:hover {
     opacity: 50%;
@@ -105,81 +62,6 @@
 
 .socials a img {
     display: block;
-    width: 1.75em;
+    width: 2em;
     height: auto;
 }   
-
-.links a:hover:not(.highlight) {
-    /* background-color: var(--black); */
-    -webkit-transition: background-color .3s ease-in;
-    -ms-transition: background-color .3s ease-in;
-    transition: all .3s ease-in;
-    border: 1px solid var(--black);
-    /* color: var(--white); */
-}
-
-/* @keyframes fadeInFromLeft {
-    0% {
-        transform: translateX(-20px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-} */
-
-.picture-container>img {
-    width: 25vw;
-    height: auto;
-    /* border-radius: 50%; */
-}
-
-@media only screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        justify-content: flex-start;
-        margin: 0;
-    }
-
-    .introduction {
-        order: 2;
-        align-items: center;
-        margin-top: 0.5em;
-        margin-inline: 0;
-    }
-
-    .introduction > p:nth-child(1) {
-        font-size: 1.25em;
-        text-align: center;
-    }
-
-    .introduction > p:nth-child(2) {
-        font-size: 1.8em;
-        text-align: center;
-        margin: 1vh 0;
-    }
-
-    .introduction > p:nth-child(3) {
-        font-size: 1em;
-        text-align: center;
-    }
-
-    .picture-container {
-        order: 1;
-    }
-
-    .links > a {
-        display: block;
-        width: 40vw;
-    }
-
-    .links > a:last-child {
-        margin-bottom: 1.5em;
-    }
-
-    .picture-container img {
-        width: 12em;
-    }
-}

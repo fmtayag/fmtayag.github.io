@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import asideImage from '@images/placeholder-1.png';
 import social1 from '@images/linkedin.png';
 import social2 from '@images/behance.png';
+import social3 from '@images/github.png';
 
 import * as myProfile from '@content/profile/text.md';
 ---
@@ -11,35 +12,22 @@ import * as myProfile from '@content/profile/text.md';
     @import '@styles/profile.css';
 </style>
 
-<div class="page">
-    <div class="container">
-        <div class="introduction">
-            <p>Hi! I'm Francis,</p>
-            <p>Frontend Web Developer</p>
-            <p>I design and develop simple but elegant websites. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="links">
-                <a class="primary" href="/">My Projects</a>
-                <a class="tertiary" href="/">Contact</a>
-            </div>
-            <div class="socials">
-                <!-- <div>Follow Me: </div> -->
-                <div>
-                    <a href="/">
-                        <Image src={social1} alt="Social" />
-                    </a>
-                </div>
-                <div>
-                    <a href="/">
-                        <Image src={social2} alt="Social" />
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    
-        <div class="picture-container">
-            <Image src={asideImage} alt="Aside" />
-        </div>
+<div id="profile">
+    <Image src={asideImage} alt="Aside" />
+    <div id="basic-info">
+        <h1 class="title line">Francis Tayag</h1>
+        <h2 class="subtitle secondary">Frontend Developer & Designer</h2>
     </div>
-    
+    <div class="socials">
+        <!-- <div>Follow Me: </div> -->
+        <a href="/">
+            <Image src={social1} alt="Social" />
+        </a>
+        <a href="/">
+            <Image src={social2} alt="Social" />
+        </a>
+        <a href="/">
+            <Image src={social3} alt="Social" />
+        </a>
+    </div>
 </div>

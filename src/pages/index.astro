@@ -1,8 +1,17 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Profile from '@components/Profile.astro';	
+import Profile from '@components/Profile.astro'
+import '@styles/index.css';
 ---
 
-<Layout title="Francis Tayag">
+<Layout title="Francis Tayag">	
 	<Profile />
+	<div class="about-me">
+		<h1>About Me</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet nunc quis fringilla semper. Morbi lobortis urna eu purus dapibus ultrices. Sed vehicula massa a fermentum mollis.</p>
+		<h2>Education</h2>
+	</div>
+	<div id="projects">
+		<h1>Projects</h1>
+	</div>
 </Layout>
