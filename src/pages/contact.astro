@@ -1,9 +1,19 @@
 ---
+import Socials from '@components/Socials.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
+<style>
+    @import '@styles/contact.css';
+</style>
+
 <Layout title="Contact">	
 	<div class="contact">
-        <h1>Contact</h1>
+        <h1 class="line">Contact</h1>
+        <h2 class="wg-lighter">E-mail</h2>
+        <p class="secondary">Got any inquiries? Please send them to <a class="wg-bolder" href="mailto:someone@example.com">franztayag@gmail.com</a> via your e-mail client.</p>
+        <h2 class="wg-lighter">Social Media</h2>
+        <p class="secondary">Alternatively, you can reach me through my social media accounts: </p>
+        <Socials />
     </div>
 </Layout>

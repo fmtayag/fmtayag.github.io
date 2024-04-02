@@ -1,11 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import profilePicture from '@images/placeholder-1.png';
-import social1 from '@images/linkedin.png';
-import social2 from '@images/behance.png';
-import social3 from '@images/github.png';
+import Socials from './Socials.astro';
 
-import * as myProfile from '@content/profile/text.md';
 ---
 
 <style>
@@ -16,18 +13,7 @@ import * as myProfile from '@content/profile/text.md';
     <Image src={profilePicture} alt="Profile Picture" />
     <div id="basic-info">
         <h1 class="title line larger">Francis Tayag</h1>
-        <h2 class="subtitle secondary">Frontend Developer & Designer</h2>
+        <h2 class="subtitle secondary">Frontend Developer & Illustrator</h2>
     </div>
-    <div id="socials">
-        <!-- <div>Follow Me: </div> -->
-        <a href="/">
-            <Image src={social1} alt="Social" />
-        </a>
-        <a href="/">
-            <Image src={social2} alt="Social" />
-        </a>
-        <a href="/">
-            <Image src={social3} alt="Social" />
-        </a>
-    </div>
+    <Socials />
 </div>
