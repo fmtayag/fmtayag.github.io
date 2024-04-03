@@ -48,6 +48,7 @@ a {
   text-decoration: none;
   font-weight: 500;
   color: var(--black);
+  
 }
 
 a:visited {
@@ -56,6 +57,16 @@ a:visited {
 
 a:hover:not(.logo) {
   color: var(--color1);
+}
+
+a.external[target="_blank"]::after {
+  content: "\2197";
+  margin-inline-start: 0.15em;
+}
+
+a[href^="mailto:"]::before {
+  content: "\1F4E7";
+  margin-inline-end: 0.15em;
 }
 
 .line {
