@@ -2,9 +2,9 @@
 /* * { outline: 1px solid #e6e3db; } */
 
 :root {
-  --color1: silver; 
-  --color2: gray; 
-  --color3: #9bc6ff;
+  --color1: rgb(157, 157, 157); 
+  --color2: rgb(102, 102, 102); 
+  --color3: #11113D;
   --black: #11113D;
   /* --white: #FFFFFF; */
   --white: #F6F6F6;
@@ -77,6 +77,10 @@ a:hover:not(.logo) {
 
 .secondary {
   color: var(--color2);
+}
+
+.tertiary {
+  color: var(--color1);
 }
 
 .wg-lighter {

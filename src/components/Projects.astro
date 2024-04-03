@@ -24,13 +24,12 @@ import social3 from '@images/github.png';
                 </div>
                 <div class="list-info">
                     <h3><a href={`/projects/${entry.slug}`}>{entry.data.title}</a></h3>
-                    <p>{entry.data.summary}</p>
+                    <p class="secondary">{entry.data.summary}</p>
   
                     <div id="techs">
                         {entry.data.techs.map(tech => 
-                            <p>{tech}</p>
+                            <p class="tertiary">{tech}</p>
                         )}
-  
                     </div>
                 </div>
                 
