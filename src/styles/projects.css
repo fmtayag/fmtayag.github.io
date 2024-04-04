@@ -45,6 +45,8 @@
 #techs {
     font-weight: lighter;
     color: var(--color2);
+    /* display: block;
+    float: right; */
 }
 
 #techs p {
@@ -63,7 +65,7 @@
 }
 
 #roles {
-    display: inline-block;
+    margin-top: 0.5em;
 }
 
 #roles p {

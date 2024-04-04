@@ -26,18 +26,22 @@ import social3 from '@images/github.png';
                 <div class="list-info">
                     
                     <h3><a href={`/projects/${entry.slug}`}>{entry.data.title}</a></h3>
+                    
+                    <p class="secondary">{entry.data.summary}</p>
                     <div id="roles">
                         {entry.data.roles.map(role => 
                             <p class="tertiary">{role}</p>
                         )}
                     </div>
-                    <p class="secondary">{entry.data.summary}</p>
-                    
-                        <div id="techs">
-                            {entry.data.techs.map(tech => 
+                    <div id="techs">
+                        {
+                            
+                            entry.data.techs.map(tech => 
                                 <p class="tertiary">{tech}</p>
-                            )}
-                        </div>      
+                            )
+                    }
+                    </div>  
+                        
                 </div>
                 
             </div>

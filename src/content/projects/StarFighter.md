@@ -2,7 +2,7 @@
 title: 'Star Fighter'
 release: '2022'
 summary: "A fast-paced shoot 'em up video game made in the style reminiscent of 80s arcade games."
-techs: ['Pygame', 'Python']
+techs: ['Python', 'Pygame']
 roles: ['Solo Project'] 
 ---
 [Provide an overview of the software, the problem it is solving, challenges faced, and results]

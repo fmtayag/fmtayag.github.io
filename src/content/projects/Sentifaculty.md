@@ -2,8 +2,8 @@
 title: 'SentiFaculty'
 release: '2023'
 summary: 'A university faculty evaluation web app with integrated text-based sentiment analysis.'
-techs: ['Django', 'Python', 'MySQL']
-roles: ['Team Lead', 'Fullstack Dev']
+techs: ['Python', 'Django', 'MySQL']
+roles: ['Fullstack Dev']
 ---
 [Provide an overview of the software, the problem it is solving, challenges faced, and results]
 [In general, use 3 sentences in a paragraph. Only most relevant info.]
