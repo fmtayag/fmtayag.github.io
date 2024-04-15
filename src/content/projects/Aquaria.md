@@ -2,7 +2,7 @@
 title: 'Aquaria'
 release: '2022'
 summary: 'A mobile app for aquarists to help compute recurring costs, calculate aquarium dimensions, and check tankmate compatibility.'
-techs: ['C#', 'Xamarin', '.NET']
+techs: ['C#', 'Xamarin']
 roles: ['Solo Project']
 ---
 [Provide an overview of the software, the problem it is solving, challenges faced, and results]
