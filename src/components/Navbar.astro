@@ -4,31 +4,20 @@
 
 <script>
     let isToggled = false;
-    const navbar = document.getElementById("navbar");
     const hamburger = document.getElementById("hamburger");
-    const checkbox = document.getElementById("checkbox");
     const responsive = document.getElementById("responsive");
 
-    checkbox.addEventListener("click", () => {
+    hamburger.addEventListener("click", () => {
         isToggled = isToggled ? false : true;
         isToggled
             ? responsive.classList.remove("hide")
             : responsive.classList.add("hide");
-    });
 
-    // // Sticky navbar
-    // window.onscroll = function() {myFunction()};
+        isToggled 
+            ? hamburger.classList.add("open") 
+            : hamburger.classList.remove("open");
+    })
 
-    // let navbar = document.getElementById("navbar");
-    // let top = navbar.offsetTop;
-
-    // function myFunction() {
-    //     if (window.scrollY >= top) {
-    //         navbar.classList.add("sticky");
-    //     } else {
-    //         navbar.classList.remove("sticky");
-    //     }
-    // }
 </script>
 
 <div class="navbar" id="navbar">
@@ -45,7 +34,9 @@
         </div>
 
         <div class="hamburger" id="hamburger">
-            <input id="checkbox" type="checkbox" />
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
     <div class="container">
