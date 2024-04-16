@@ -1,6 +1,9 @@
 #navbar {
     background-color: var(--white);
     font-size: 1.25em;
+    position: relative;
+    width: 100%;
+    z-index: 1;
 }
 
 #normal {
@@ -44,7 +47,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
     @keyframes fromLeft {
         from { transform: translateX(-100%); }
         to { transform: translateX(0); }
@@ -80,11 +83,15 @@
     }
 
     #responsive {
-        /* position: absolute; */
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 1em;
+        left: -2.5vw;
+        
+        position: absolute;
+        
     }
     #responsive.hide {
         display: none;
@@ -95,7 +102,6 @@
         animation-fill-mode: forwards;
     }
     #responsive a {
-        /* position: relative; */
         background-color: var(--link);
         color: var(--white);
         padding: 0.5em;
@@ -105,12 +111,6 @@
         animation: fromLeft 0.3s ease-in;
         animation-fill-mode: backwards;
     }
-
-    /* I acknowledge this is hacky but I don't want to use SASS right now */
-    /* #responsive a:nth-child(1) { animation-delay: 0.1s; } 
-    #responsive a:nth-child(2) { animation-delay: 0.2s; }
-    #responsive a:nth-child(3) { animation-delay: 0.3s; }
-    #responsive a:nth-child(4) { animation-delay: 0.4s; } */
 }
 
 /* ----- Hamburger Menu ----- */
