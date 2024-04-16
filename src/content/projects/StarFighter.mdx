@@ -30,14 +30,14 @@ I wrote the game in **Python** using the **pygame** framework. In addition, I de
 
 Star Fighter is the first game that I released publicly. Up until then, I've been developing games using pygame and other game engines rather aimlessly. After deciding to settle down with pygame as I felt that full-fledged game engines such as Unity were overwhelming, I hunkered down for a couple of weeks to learn everything I can about it. 
 
-The first version of the game is essentially just a clone of a KidsCanCode tutorial but dressed with my own art assets. It's rather lackluster now, in retrospect, but I was proud of finally finishing a game. 
+The first version of the game is essentially just a clone of a KidsCanCode tutorial but dressed with my own art assets. It's rather lackluster, in retrospect, but I was proud of finally finishing a game. 
 
 <div class="txt-center">
     <Image src={image4} alt="Star Fighter - First Version" />
     <Image src={image3} alt="Star Fighter - First Version" />
 </div>
 
-After studying Python for some months and participating in a few game jams, I decided to come back and review Star Fighter to see if there's anything else I could improve. Back then, I didn't know better, so I set about adding every cool feature I could think of and in a span of a week, I ended up with a mess of a codebase such that adding new features became exponentially time-consuming and tedious. It got so bad that I eventually decided to take a step back and re-evaluate.
+I released the game on itch.io as Version 1 and left it at that. I participated in a few game jams over the course of a few months before deciding to come back and review Star Fighter to see what else I could improve upon. Back then, I didn't know better, so I set about adding every cool feature I could think of and within a week, I ended up with such a mess of a codebase that adding new features became exponentially time-consuming and tedious. It got so bad that I eventually decided to take a step back and re-evaluate.
 
 Luckily, around the same time, I was attending my university lectures and the topic that week was coincidentally about design patterns. After researching more and learning about them - particularly the State pattern - I quickly set about to rewrite the entire codebase from scratch but this time with much more care put into every line of code.
 
@@ -48,7 +48,7 @@ It took over a month to rework the entire game, and when I say that, I meant rew
     <Image src={image2} alt="Star Fighter Gameplay" />
 </div>
 
-I continued to update the game for a couple of months, which mostly consisted of minor graphical enhancements. Eventually, I wanted to move on to other projects and so called it quits. Before that though, I decided to open-source the codebase to give back to the community as I "borrowed" and studied other open-source codebases during development, and I definitely wouldn't have been able to solve a number of problems without them.
+I continued to update the game for a couple of months, which mostly consists of minor graphical enhancements. Eventually, I wanted to move on to other projects and so called it quits. Before that though, I decided to open-source the codebase to give back to the community as I "borrowed" and studied other open-source codebases during development, and I definitely wouldn't have been able to solve a number of problems without them.
 
 Looking back, there's still a number of glaring game design and code issues present. Not making the 'triple gun' powerup not expire is rather silly, for example, and it was made as a bandaid for the game's exponentially increasing difficulty. There's also some code choices I made that seem rather bizarre in retrospect - the UI code for one is rather messy and I went about loading the animation frames in a brute-force manner.
 
