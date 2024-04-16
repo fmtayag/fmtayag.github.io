@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import linkedIn from "@images/linkedin.png";
+import itch from "@images/itch.png";
+import github from "@images/github.png";
+import twitter from "@images/twitter.png";
+---
+
+<div class="icons">
+    <!-- <div>Follow Me: </div> -->
+    <a
+        href="https://www.linkedin.com/in/francistayag/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image src={linkedIn} alt="Linked In" />
+    </a>
+    <a
+        href="https://github.com/zyenapz"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image src={github} alt="GitHub" />
+    </a>
+    <a
+        href="https://twitter.com/zyenapz"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image src={twitter} alt="Twitter" />
+    </a>
+    <a
+        href="https://zyenapz.itch.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <Image src={itch} alt="Itch.io" />
+    </a>
+</div>

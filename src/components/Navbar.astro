@@ -1,0 +1,59 @@
+<style>
+    @import "@styles/navbar.css";
+</style>
+
+<script>
+    let isToggled = false;
+    const navbar = document.getElementById("navbar");
+    const hamburger = document.getElementById("hamburger");
+    const checkbox = document.getElementById("checkbox");
+    const responsive = document.getElementById("responsive");
+
+    checkbox.addEventListener("click", () => {
+        isToggled = isToggled ? false : true;
+        isToggled
+            ? responsive.classList.remove("hide")
+            : responsive.classList.add("hide");
+    });
+
+    // // Sticky navbar
+    // window.onscroll = function() {myFunction()};
+
+    // let navbar = document.getElementById("navbar");
+    // let top = navbar.offsetTop;
+
+    // function myFunction() {
+    //     if (window.scrollY >= top) {
+    //         navbar.classList.add("sticky");
+    //     } else {
+    //         navbar.classList.remove("sticky");
+    //     }
+    // }
+</script>
+
+<div class="navbar" id="navbar">
+    <div id="normal">
+        <div id="logo">
+            <a href="/">Francis Tayag</a>
+        </div>
+
+        <div id="links">
+            <!-- <a href="/">Home</a>
+            <a href="/">About</a>
+            <a href="/projects">Projects</a> -->
+            <a id="contact" href="/contact">Contact</a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <input id="checkbox" type="checkbox" />
+        </div>
+    </div>
+    <div class="container">
+        <div id="responsive" class="hide">
+            <!-- <a href="/">Home</a>
+            <a href="/">About</a>
+            <a href="/projects">Projects</a> -->
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+</div>

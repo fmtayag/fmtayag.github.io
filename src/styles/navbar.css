@@ -1,0 +1,139 @@
+#navbar {
+    background-color: var(--white);
+    font-size: 1.25em;
+}
+
+#normal {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 1em 0;
+    align-items: center;
+}
+
+#logo {
+    display: inherit;   
+}
+
+#logo > a {
+    font-family: "Avant Garde";
+    font-weight: bolder;
+    letter-spacing: 5.5px;
+    text-transform: uppercase;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+}
+
+#links a {
+    padding: 0.5em 0;
+    padding-inline: 1.5rem;
+    text-align: center;
+}
+
+#contact {
+    margin-inline: 5em 0;
+    padding: 0.5em 1em;
+    border: 1px solid var(--color1);
+    border-radius: 0.25em;
+}
+
+#responsive {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    @keyframes fromLeft {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+    }
+
+    @keyframes toLeft {
+        from { transform: translateX(0); }
+        to { transform: translateX(-200%); }
+    }
+
+    @keyframes containerInitAnimation {     
+        0% {  opacity: 0; pointer-events: none; }     
+        99% {  opacity: 0; }     
+        100% { opacity: 1; pointer-events: all; } 
+    }
+
+    @keyframes containerHideAnimation {
+        from { display: flex; }
+        to { display: none; }
+    }
+
+    #links {
+        display: none;
+    } 
+    #hamburger {
+        display: flex !important;
+        align-self: center;
+    }
+
+    .container {
+        display: block;
+        animation: containerInitAnimation 1s forwards; /* Fixes the toLeft animation playing on page load */
+    }
+
+    #responsive {
+        /* position: absolute; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #responsive.hide {
+        display: none;
+        animation: containerHideAnimation 0.5s ease-in forwards;
+    }
+    #responsive.hide a {
+        animation: toLeft 0.3s ease-in;
+        animation-fill-mode: forwards;
+    }
+    #responsive a {
+        /* position: relative; */
+        background-color: var(--link);
+        color: var(--white);
+        padding: 0.5em;
+        padding-inline-end: 1.5em;
+        text-align: right;
+
+        animation: fromLeft 0.3s ease-in;
+        animation-fill-mode: backwards;
+    }
+
+    /* I acknowledge this is hacky but I don't want to use SASS right now */
+    /* #responsive a:nth-child(1) { animation-delay: 0.1s; } 
+    #responsive a:nth-child(2) { animation-delay: 0.2s; }
+    #responsive a:nth-child(3) { animation-delay: 0.3s; }
+    #responsive a:nth-child(4) { animation-delay: 0.4s; } */
+}
+
+/* ----- Hamburger Menu ----- */
+
+#hamburger {
+    display: none;
+    border: 1px solid var(--color1);
+}
+
+.toggled {
+    background-color: green;
+}
+
+.untoggled {
+    background-color: red;
+}
+
+input[type=checkbox] {
+    opacity: 0;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 3em;
+    height: 3em;
+    display: inline-block;
+    margin: 0;
+}

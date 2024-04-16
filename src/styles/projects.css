@@ -1,0 +1,33 @@
+.list-item {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-auto-rows: auto;
+}
+
+.list-item:not(:first-child) {
+    margin: 2em auto;
+}
+
+.list-info a::after {
+    content: "\003E";
+    margin-inline: 0.1em;
+    transition: margin .2s ease-in;
+}
+
+.list-info a:hover::after {
+    margin-inline: 0.3em;
+}
+
+#year p {
+    margin: 0;
+    font-size: 1.15em;
+}
+
+#techs p {
+    display: inline;
+}
+
+#techs p:not(:last-child):after {
+    content: "\25cf";
+    margin-inline: 0.25em;
+}

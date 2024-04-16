@@ -1,0 +1,58 @@
+---
+title: 'Star Fighter'
+release: '2021-05-08'
+summary: "A fast-paced shoot 'em up video game in the style reminiscent of 80s arcade games. My first published game."
+techs: ['Python', 'Pygame']
+roles: ['Programmer', '2D Artist'] 
+type: 'Personal'
+pubDate: '2024-04-16'
+links: {
+    'github': 'https://github.com/zyenapz/Star-Fighter',
+    'itch': 'https://zyenapz.itch.io/star-fighter'
+}
+---
+
+import { Image } from 'astro:assets';
+import image1 from '@assets/StarFighter/image-1.png';
+import image2 from '@assets/StarFighter/image-2.png';
+import image3 from '@assets/StarFighter/image-3.png';
+import image4 from '@assets/StarFighter/image-4.png';
+
+**Star Fighter** is a **2D shoot 'em up** which takes inspiration from 80s arcade games like Galaga and Defender, as well as modern titles like ZeroRanger. In the game, the player controls the titular Star Fighter and is tasked with gaining as much score as possible by shooting the endless torrent of enemies and avoiding projectiles.
+
+I wrote the game in **Python** using the **pygame** framework. In addition, I designed and animated the pixel art assets. Save for the music, which was composed by a friend, I developed the game solo to familiarize myself with the fundamentals of game development and Python. 
+
+<div class="iframe-container">
+    <iframe src="https://www.youtube.com/embed/oP6xZnNXMc4?si=QlOrKGkuQIgFhA4e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## In Detail
+
+Star Fighter is the first game that I released publicly. Up until then, I've been developing games using pygame and other game engines rather aimlessly. After deciding to settle down with pygame as I felt that full-fledged game engines such as Unity were overwhelming, I hunkered down for a couple of weeks to learn everything I can about it. 
+
+The first version of the game is essentially just a clone of a KidsCanCode tutorial but dressed with my own art assets. It's rather lackluster now, in retrospect, but I was proud of finally finishing a game. 
+
+<div class="txt-center">
+    <Image src={image4} alt="Star Fighter - First Version" />
+    <Image src={image3} alt="Star Fighter - First Version" />
+</div>
+
+After studying Python for some months and participating in a few game jams, I decided to come back and review Star Fighter to see if there's anything else I could improve. Back then, I didn't know better, so I set about adding every cool feature I could think of and in a span of a week, I ended up with a mess of a codebase such that adding new features became exponentially time-consuming and tedious. It got so bad that I eventually decided to take a step back and re-evaluate.
+
+Luckily, around the same time, I was attending my university lectures and the topic that week was coincidentally about design patterns. After researching more and learning about them - particularly the State pattern - I quickly set about to rewrite the entire codebase from scratch but this time with much more care put into every line of code.
+
+It took over a month to rework the entire game, and when I say that, I meant reworking not just the codebase but the 'creative' side, as well. Indeed, I'd guesstimate that 70% of the time was spent redesigning the gameplay and the art assets, which now featured animations. The resulting game was substantially more complex than the previous version on all fronts. 
+
+<div class="txt-center">
+    <Image src={image1} alt="Star Fighter Intro Screen" />
+    <Image src={image2} alt="Star Fighter Gameplay" />
+</div>
+
+I continued to update the game for a couple of months, which mostly consisted of minor graphical enhancements. Eventually, I wanted to move on to other projects and so called it quits. Before that though, I decided to open-source the codebase to give back to the community as I "borrowed" and studied other open-source codebases during development, and I definitely wouldn't have been able to solve a number of problems without them.
+
+Looking back, there's still a number of glaring game design and code issues present. Not making the 'triple gun' powerup not expire is rather silly, for example, and it was made as a bandaid for the game's exponentially increasing difficulty. There's also some code choices I made that seem rather bizarre in retrospect - the UI code for one is rather messy and I went about loading the animation frames in a brute-force manner.
+
+And that's all she wrote. Well, perhaps there's a bit more. Star Fighter is a project that I'm really fond of as it unified all of my interests - worldbuilding, game design, art, and programming. It was also the subject of a write-up in two issues on Linux Format (<a class="external" href="https://issuu.com/futurepublishing/docs/lxf282.issuu" target="_blank" rel="noopener noreferrer">#282</a> and <a class="external" href="https://issuu.com/futurepublishing/docs/lxf283.issuu" target="_blank" rel="noopener noreferrer">#283</a>), and seeing my name on print is cool! But more importantly, it was also the project in which I received my first fan mail, talking about how much they enjoyed my game, and **that** is really cool!
+
+Anyways, if you enjoyed this write-up, I'd like you to know that I'm currently developing a spiritual successor to Star Fighter called ***Glass Wing***. No details yet, but stay tuned!
+
