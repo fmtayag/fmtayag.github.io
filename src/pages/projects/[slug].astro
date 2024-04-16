@@ -37,12 +37,12 @@ const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title}>
-  <div class="project-details">
+  <div class="fadeIn">
     <!-- <Slideshow images={project.images} /> -->
     <article>
       <h1>{entry.data.title}</h1>
 
-      <div class="links line margin-btm-m">
+      <div class="icons colored line margin-btm-m">
         {
           entry.data.links.github && (
             <a
@@ -70,19 +70,19 @@ const { Content } = await entry.render();
 
       <div id="summary">
         <div>
-          <p class="header">{entry.data.type}</p>
+          <p class="emphasize">{entry.data.type}</p>
           <p>Project Type</p>
         </div>
         <div>
-          <p class="header">{entry.data.techs.join(", ")}</p>
+          <p class="emphasize">{entry.data.techs.join(", ")}</p>
           <p>Languages/Frameworks</p>
         </div>
         <div>
-          <p class="header">{entry.data.roles.join(", ")}</p>
+          <p class="emphasize">{entry.data.roles.join(", ")}</p>
           <p>Role(s)</p>
         </div>
         <div>
-          <p class="header">
+          <p class="emphasize">
             {
               entry.data.release.toLocaleDateString("en-us", {
                 year: "numeric",

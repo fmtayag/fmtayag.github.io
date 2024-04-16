@@ -3,7 +3,13 @@ title: 'Aquaria'
 release: '2022'
 summary: 'A mobile app for aquarists to help compute recurring costs, calculate aquarium dimensions, and check tankmate compatibility.'
 techs: ['C#', 'Xamarin']
-roles: ['Solo Project']
+roles: ['Programmer']
+type: 'University'
+pubDate: '2024-04-16'
+links: {
+    'github': 'https://github.com/zyenapz/Star-Fighter',
+    'itch': 'https://zyenapz.itch.io/star-fighter'
+}
 ---
 [Provide an overview of the software, the problem it is solving, challenges faced, and results]
 [In general, use 3 sentences in a paragraph. Only most relevant info.]

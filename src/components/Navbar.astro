@@ -1,5 +1,5 @@
 <style>
-    @import '@styles/navbar.css';
+    @import "@styles/navbar.css";
 </style>
 
 <script>
@@ -8,12 +8,14 @@
     const hamburger = document.getElementById("hamburger");
     const checkbox = document.getElementById("checkbox");
     const responsive = document.getElementById("responsive");
-    
-    checkbox.addEventListener('click', () => {
+
+    checkbox.addEventListener("click", () => {
         isToggled = isToggled ? false : true;
-        isToggled ? responsive.classList.remove("hide") : responsive.classList.add("hide");
-    })
-    
+        isToggled
+            ? responsive.classList.remove("hide")
+            : responsive.classList.add("hide");
+    });
+
     // // Sticky navbar
     // window.onscroll = function() {myFunction()};
 
@@ -34,14 +36,14 @@
         <div id="logo">
             <a href="/">Francis Tayag</a>
         </div>
-    
+
         <div id="links">
             <!-- <a href="/">Home</a>
             <a href="/">About</a>
             <a href="/projects">Projects</a> -->
             <a id="contact" href="/contact">Contact</a>
         </div>
-    
+
         <div class="hamburger" id="hamburger">
             <input id="checkbox" type="checkbox" />
         </div>
@@ -54,6 +56,4 @@
             <a href="/contact">Contact</a>
         </div>
     </div>
-    
-
 </div>

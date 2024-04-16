@@ -1,82 +1,33 @@
-#projects {
-    margin-top: 1em;
-}
-
 .list-item {
     display: grid;
     grid-template-columns: 20% auto;
     grid-auto-rows: auto;
 }
 
-.year p {
-    margin: 0;
-    font-size: 1.15em;
-}
-
 .list-item:not(:first-child) {
     margin: 2em auto;
 }
 
-.list-info h3 {
-    margin: 0;
-}
-
-.list-info a {
-    font-weight: bolder;
-    transition: color .2s ease-in;
-}
-
 .list-info a::after {
     content: "\003E";
-    margin-inline: 0.25em;
+    margin-inline: 0.1em;
     transition: margin .2s ease-in;
 }
 
 .list-info a:hover::after {
-    margin-inline: 0.5em;
+    margin-inline: 0.3em;
 }
 
-#links img {
-    float: right;
-    width: 2em;
-    height: auto;
-}
-
-#techs {
-    font-weight: lighter;
-    color: var(--color2);
-    /* display: block;
-    float: right; */
+#year p {
+    margin: 0;
+    font-size: 1.15em;
 }
 
 #techs p {
     display: inline;
 }
 
-/* #techs p:first-child::before {
-    content: "\01F528";
-    color: transparent;  
-    text-shadow: 0 0 0 var(--black);
-} */
-
 #techs p:not(:last-child):after {
     content: "\25cf";
     margin-inline: 0.25em;
-}
-
-#roles {
-    margin-top: 0.5em;
-}
-
-#roles p {
-    display: inline;
-}
-
-#roles p:not(:last-child):after {
-    content: "\25cf";
-    margin-inline: 0.25em;
-}
-
-#roles p:first-child::before {
-    /* content: "\01F9D1"; */
 }

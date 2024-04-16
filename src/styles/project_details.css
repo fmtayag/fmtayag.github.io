@@ -3,25 +3,29 @@
     margin: 1em;
 }
 
-article > h1 {
-    text-align: center;
+.page-controls {
+    display: flex;
+    justify-content: space-between;
 }
 
 article {
     padding-bottom: 3em;
 }
 
-p {
-    text-align: justify;
-    line-height: 1.5em;
-    color: var(--color2);
-}
-
-.gallery {
+article h1 {
+    font-family: "Now";
+    font-size: 3em;
+    margin: 0.5em 0;
+    text-transform: uppercase;
     text-align: center;
 }
 
-img {
+article p {
+    text-align: justify;
+    color: var(--color2);
+}
+
+article img {
     max-width: 20em;
     height: auto;
     display: inline-block;
@@ -29,18 +33,23 @@ img {
     transition: transform 0.4s ease;
 }
 
-img:hover {
+article img:hover {
     transform: scale(1.3);
 }
 
-.iframe-container {
+article .iframe-container {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
-  
-iframe {
+
+article iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,12 +57,6 @@ iframe {
     right: 0;
     width: 100%;
     height: 100%;
-}
-
-iframe.secondary {
-    width: 80%;
-    height: 80%;
-    margin: auto;
 }
 
 #summary {
@@ -69,11 +72,11 @@ iframe.secondary {
     flex: 1 1 0px;
 }
 
-#summary .header {
+#summary .emphasize {
     font-weight: bolder;
 }
 
-#summary p:not(.header) {
+#summary p:not(.emphasize) {
     color: var(--color1)
 }
 
@@ -81,14 +84,6 @@ iframe.secondary {
     text-align: center;
     margin: 0.1em;
 }
-
-h1 {
-    font-family: "Now";
-    font-size: 3em;
-    margin: 0.5em 0;
-    text-transform: uppercase;
-}
-
 
 @media only screen and (max-width: 640px) {
     img {
@@ -98,46 +93,8 @@ h1 {
         margin-bottom: 0.5em;
         margin-inline: auto;
     }
+
     #summary div {
         margin: 0.5em;
     }
-}
-
-
-.links {
-    display: flex;
-    justify-content: center;
-}
-
-.margin-top-m {
-    margin-top: 2em;
-}
-
-.margin-btm-m {
-    margin-bottom: 2em;
-}
-
-.links a {
-    display: inline;
-    float: left;
-    margin-inline: 5px;
-    transition: opacity 0.2s ease-in;
-}
-.links a:hover {
-    opacity: 50%;
-}
-
-.links a img {
-    display: block;
-    width: 3em;
-    height: auto;
-}
-
-.links a img:hover {
-    transform: scale(1);
-}
-
-.page-controls {
-    display: flex;
-    justify-content: space-between;
 }

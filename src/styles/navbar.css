@@ -1,10 +1,5 @@
 #navbar {
-    z-index: 1;
     background-color: var(--white);
-
-    /* position: fixed;
-    width: 100%; */
-
     font-size: 1.25em;
 }
 
@@ -22,8 +17,9 @@
 
 #logo > a {
     font-family: "Avant Garde";
-    font-weight: 1000;
-    letter-spacing: 4px;
+    font-weight: bolder;
+    letter-spacing: 5.5px;
+    text-transform: uppercase;
 }
 
 #links {
@@ -35,10 +31,6 @@
     padding: 0.5em 0;
     padding-inline: 1.5rem;
     text-align: center;
-}
-
-#links a:hover {
-    
 }
 
 #contact {
@@ -88,7 +80,7 @@
     }
 
     #responsive {
-        position: absolute;
+        /* position: absolute; */
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -103,21 +95,22 @@
         animation-fill-mode: forwards;
     }
     #responsive a {
-        position: relative;
-        background-color: var(--white);
+        /* position: relative; */
+        background-color: var(--link);
+        color: var(--white);
         padding: 0.5em;
         padding-inline-end: 1.5em;
         text-align: right;
-        /* text-align: center; */
+
         animation: fromLeft 0.3s ease-in;
         animation-fill-mode: backwards;
     }
 
     /* I acknowledge this is hacky but I don't want to use SASS right now */
-    #responsive a:nth-child(1) { animation-delay: 0.1s; } 
+    /* #responsive a:nth-child(1) { animation-delay: 0.1s; } 
     #responsive a:nth-child(2) { animation-delay: 0.2s; }
     #responsive a:nth-child(3) { animation-delay: 0.3s; }
-    #responsive a:nth-child(4) { animation-delay: 0.4s; }
+    #responsive a:nth-child(4) { animation-delay: 0.4s; } */
 }
 
 /* ----- Hamburger Menu ----- */
@@ -144,10 +137,3 @@ input[type=checkbox] {
     display: inline-block;
     margin: 0;
 }
-
-/* @media only screen and (max-width: 1280px) {
-    #hamburger {
-        display: flex;
-        align-self: center;
-    }
-} */

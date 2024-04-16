@@ -1,19 +1,20 @@
 ---
-import { Image } from 'astro:assets';
-import profilePicture from '@images/placeholder-1.png';
-import Socials from './Socials.astro';
-
+import { Image } from "astro:assets";
+import profilePicture from "@images/placeholder-1.png";
+import Socials from "./Socials.astro";
 ---
 
 <style>
-    @import '@styles/profile.css';
+    @import "@styles/profile.css";
 </style>
 
 <div id="profile">
     <Image src={profilePicture} alt="Profile Picture" />
-    <div id="basic-info">
-        <h1 class="title line larger">Francis Tayag</h1>
-        <h2 class="subtitle secondary">Frontend Developer &#x25cf; UX Designer</h2>
+    <div class="txt-center margin-v-s">
+        <h1 class="margin-none line larger">Francis Tayag</h1>
+        <h2 class="subtitle secondary">
+            Frontend Developer &#x25cf; UX Designer
+        </h2>
     </div>
     <Socials />
 </div>
