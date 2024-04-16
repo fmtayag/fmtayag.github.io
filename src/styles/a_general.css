@@ -6,13 +6,22 @@
   --color2: rgb(88, 88, 88); 
   --color3: #11113D;
   --black: #11113D;
+  --link: #cb1b5f;
   /* --white: #FFFFFF; */
   --white: #F6F6F6;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url("/fonts/Montserrat-Regular.ttf") format('woff2');
+  font-family: 'Avant Garde';
+  src: url("/fonts/AVGARDD_2.TTF") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Now';
+  src: url("/fonts/Now-Bold.otf") format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -48,7 +57,6 @@ a {
   text-decoration: none;
   font-weight: 500;
   color: var(--black);
-  
 }
 
 a:visited {

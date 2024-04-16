@@ -17,6 +17,7 @@ import social3 from '@images/github.png';
 
 <div id="projects">
     <h2 class="wg-lighter">Projects</h1>
+    <p class="secondary">At the moment, I'm still working on write-ups of my past projects which I will be releasing gradually.</p>
     <div>
         {projectEntries.map(entry => 
             <div class="list-item">
@@ -28,11 +29,7 @@ import social3 from '@images/github.png';
                     <h3><a href={`/projects/${entry.slug}`}>{entry.data.title}</a></h3>
                     
                     <p class="secondary">{entry.data.summary}</p>
-                    <div id="roles">
-                        {entry.data.roles.map(role => 
-                            <p class="tertiary">{role}</p>
-                        )}
-                    </div>
+
                     <div id="techs">
                         {
                             
@@ -49,3 +46,10 @@ import social3 from '@images/github.png';
         )}
     </div>
 </div>
+
+
+<!-- <div id="roles">
+    {entry.data.roles.map(role => 
+        <p class="tertiary">{role}</p>
+    )}
+</div> -->

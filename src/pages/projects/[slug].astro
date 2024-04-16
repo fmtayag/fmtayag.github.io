@@ -18,17 +18,17 @@ export async function getStaticPaths() {
     // Get slugs
     const prevSlug = projectEntries[prevIndex].slug;
     const nextSlug = projectEntries[nextIndex].slug;
-
-    // console.log(prevSlug + " < " + entry.slug + " > " + nextSlug);
+    const prevTitle = projectEntries[prevIndex].data.title;
+    const nextTitle = projectEntries[nextIndex].data.title;
 
     return {
-      params: { slug: entry.slug }, props: { entry, prevSlug, nextSlug },
+      params: { slug: entry.slug }, props: { entry, prevSlug, nextSlug, prevTitle, nextTitle },
     }
   })
 
 }
 
-const { entry, prevSlug, nextSlug } = Astro.props;
+const { entry, prevSlug, nextSlug, prevTitle, nextTitle } = Astro.props;
 const { Content } = await entry.render();
 
 ---
@@ -39,11 +39,14 @@ const { Content } = await entry.render();
 
     <article>
       <h1>{entry.data.title}</h1>
-      <!-- <a href=`/projects/${prevSlug}`>Previous</a>
-      <a href=`/projects/${nextSlug}`>Next</a> -->
       <Content />
+      
+      <!-- <div class="page-controls margin-top-m">
+        <a href=`/projects/${prevSlug}`>Previous: {prevTitle}</a>
+        <a href=`/projects/${nextSlug}`>Next: {nextTitle}</a>
+      </div> -->
+      
     </article>
     
-  </div>
   </div>
 </Layout>

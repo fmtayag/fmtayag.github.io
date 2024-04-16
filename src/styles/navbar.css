@@ -21,8 +21,9 @@
 }
 
 #logo > a {
+    font-family: "Avant Garde";
     font-weight: 1000;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
 }
 
 #links {
