@@ -58,12 +58,15 @@ iframe.secondary {
 
 #summary {
     display: flex;
-    color: var(--color2);
-    list-style: none;
-    margin-bottom: 2em;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+
+    color: var(--color2);
+    margin-bottom: 2em;
+}
+
+#summary div {
+    flex: 1 1 0px;
 }
 
 #summary .header {

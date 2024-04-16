@@ -1,9 +1,15 @@
 ---
 title: 'Star Fighter'
-release: '2021'
+release: '2021-05-08'
 summary: "A fast-paced shoot 'em up video game in the style reminiscent of 80s arcade games. My first published game."
 techs: ['Python', 'Pygame']
-roles: ['Solo Project'] 
+roles: ['Programmer', '2D Artist'] 
+type: 'Personal'
+pubDate: '2024-04-16'
+links: {
+    'github': 'https://github.com/zyenapz/Star-Fighter',
+    'itch': 'https://zyenapz.itch.io/star-fighter'
+}
 ---
 
 import { Image } from 'astro:assets';
@@ -11,37 +17,6 @@ import image1 from '@assets/StarFighter/image-1.png';
 import image2 from '@assets/StarFighter/image-2.png';
 import image3 from '@assets/StarFighter/image-3.png';
 import image4 from '@assets/StarFighter/image-4.png';
-
-import itch from '@images/itch.png';
-import github from '@images/github.png';
-
-<div class="links line margin-btm-m">
-    <a href="https://github.com/zyenapz" target="_blank" rel="noopener noreferrer">
-        <Image src={github} alt="GitHub" />
-    </a>
-    <a href="https://zyenapz.itch.io/" target="_blank" rel="noopener noreferrer">
-        <Image src={itch} alt="Itch.io" />
-    </a>
-</div>
-
-<div id="summary">
-    <div>
-        <p class="header">Personal / Hobby</p>
-        <p>Project Type</p>
-    </div>
-    <div>
-        <p class="header">Python, Pygame</p>
-        <p>Languages / Frameworks</p>
-    </div>
-    <div>
-        <p class="header">Programmer, 2D Artist</p>
-        <p>Role(s)</p>
-    </div>
-    <div>
-        <p class="header">May 8, 2021</p>
-        <p>Latest Release</p>
-    </div>
-</div>
 
 **Star Fighter** is a **2D shoot 'em up** which takes inspiration from 80s arcade games like Galaga and Defender, as well as modern titles like ZeroRanger. In the game, the player controls the titular Star Fighter and is tasked with gaining as much score as possible by shooting the endless torrent of enemies and avoiding projectiles.
 
@@ -53,7 +28,7 @@ I wrote the game in **Python** using the **pygame** framework. In addition, I de
 
 ## In Detail
 
-Star Fighter is the first ever game that I released publicly. Up until then, I've been developing games using pygame and other game engines rather aimlessly. After deciding to settle down with pygame as I felt that full-fledged game engines such as Unity were overwhelming, I hunkered down for a couple of weeks to learn everything I can about it. 
+Star Fighter is the first game that I released publicly. Up until then, I've been developing games using pygame and other game engines rather aimlessly. After deciding to settle down with pygame as I felt that full-fledged game engines such as Unity were overwhelming, I hunkered down for a couple of weeks to learn everything I can about it. 
 
 The first version of the game is essentially just a clone of a KidsCanCode tutorial but dressed with my own art assets. It's rather lackluster now, in retrospect, but I was proud of finally finishing a game. 
 
@@ -61,7 +36,6 @@ The first version of the game is essentially just a clone of a KidsCanCode tutor
     <Image src={image4} alt="Star Fighter - First Version" />
     <Image src={image3} alt="Star Fighter - First Version" />
 </div>
-
 
 After studying Python for some months and participating in a few game jams, I decided to come back and review Star Fighter to see if there's anything else I could improve. Back then, I didn't know better, so I set about adding every cool feature I could think of and in a span of a week, I ended up with a mess of a codebase such that adding new features became exponentially time-consuming and tedious. It got so bad that I eventually decided to take a step back and re-evaluate.
 
@@ -74,7 +48,7 @@ It took over a month to rework the entire game, and when I say that, I meant rew
     <Image src={image2} alt="Star Fighter Gameplay" />
 </div>
 
-I updated the game for a couple of months, which was mostly minor graphical enhancements, but eventually I wanted to move on to other projects and so called it quits. I open-sourced the codebase to give back to the community because I generously "borrowed" and studied other open-source codebases, and I definitely wouldn't have been able to solve a number of problems without them.
+I continued to update the game for a couple of months, which mostly consisted of minor graphical enhancements. Eventually, I wanted to move on to other projects and so called it quits. Before that though, I decided to open-source the codebase to give back to the community because I generously "borrowed" and studied other open-source codebases during development, and I definitely wouldn't have been able to solve a number of problems without them.
 
 Looking back, there's still a number of glaring game design and code issues present. Not making the 'triple gun' powerup not expire is rather silly, for example, and it was made as a bandaid for the game's exponentially increasing difficulty. There's also some code choices I made that seem rather bizarre in retrospect - the UI code for one is rather messy and I went about loading the animation frames in a brute-force manner.
 

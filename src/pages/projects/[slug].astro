@@ -1,17 +1,21 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
-import '@styles/project_details.css';
+import "@styles/project_details.css";
+
+import { Image } from "astro:assets";
+import itch from "@images/itch.png";
+import github from "@images/github.png";
 
 export async function getStaticPaths() {
-  const projectEntries = await getCollection('projects');
+  const projectEntries = await getCollection("projects");
   return projectEntries.map((entry, index) => {
     // -- For pathing purposes
     // Get previous and next indices relative to the current index
     const len = projectEntries.length;
-    const isFirstEntry = index == 0 ;
+    const isFirstEntry = index == 0;
     const isLastEntry = index == len - 1;
-    
+
     const prevIndex = isFirstEntry ? len - 1 : index - 1;
     const nextIndex = isLastEntry ? 0 : index + 1;
 
@@ -22,31 +26,85 @@ export async function getStaticPaths() {
     const nextTitle = projectEntries[nextIndex].data.title;
 
     return {
-      params: { slug: entry.slug }, props: { entry, prevSlug, nextSlug, prevTitle, nextTitle },
-    }
-  })
-
+      params: { slug: entry.slug },
+      props: { entry, prevSlug, nextSlug, prevTitle, nextTitle },
+    };
+  });
 }
 
 const { entry, prevSlug, nextSlug, prevTitle, nextTitle } = Astro.props;
 const { Content } = await entry.render();
-
 ---
 
 <Layout title={entry.data.title}>
   <div class="project-details">
     <!-- <Slideshow images={project.images} /> -->
-
     <article>
       <h1>{entry.data.title}</h1>
+
+      <div class="links line margin-btm-m">
+        {
+          entry.data.links.github && (
+            <a
+              href={entry.data.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={github} alt="GitHub" />
+            </a>
+          )
+        }
+
+        {
+          entry.data.links.itch && (
+            <a
+              href={entry.data.links.itch}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src={itch} alt="Itch.io" />
+            </a>
+          )
+        }
+      </div>
+
+      <div id="summary">
+        <div>
+          <p class="header">{entry.data.type}</p>
+          <p>Project Type</p>
+        </div>
+        <div>
+          <p class="header">{entry.data.techs.join(", ")}</p>
+          <p>Languages/Frameworks</p>
+        </div>
+        <div>
+          <p class="header">{entry.data.roles.join(", ")}</p>
+          <p>Role(s)</p>
+        </div>
+        <div>
+          <p class="header">
+            {
+              entry.data.release.toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })
+            }
+          </p>
+          <p>Latest Release</p>
+        </div>
+      </div>
+
       <Content />
-      
+
+      <p class="tertiary">
+        <i>Posted on {entry.data.pubDate.toDateString()}</i>
+      </p>
+
       <!-- <div class="page-controls margin-top-m">
         <a href=`/projects/${prevSlug}`>Previous: {prevTitle}</a>
         <a href=`/projects/${nextSlug}`>Next: {nextTitle}</a>
       </div> -->
-      
     </article>
-    
   </div>
 </Layout>
