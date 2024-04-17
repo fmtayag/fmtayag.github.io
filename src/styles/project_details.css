@@ -25,7 +25,7 @@ article p {
     color: var(--color2);
 }
 
-article img {
+article img:not(.icon) {
     max-width: 20em;
     height: auto;
     display: inline-block;
@@ -33,7 +33,7 @@ article img {
     transition: transform 0.4s ease;
 }
 
-article img:hover {
+article img:not(.icon):hover {
     transform: scale(1.3);
 }
 
