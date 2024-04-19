@@ -6,6 +6,7 @@ import "@styles/project_details.css";
 import { Image } from "astro:assets";
 import itch from "@images/itch.png";
 import github from "@images/github.png";
+import Navbar from "@components/Navbar.astro";
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection("projects");
@@ -38,7 +39,6 @@ const { Content } = await entry.render();
 
 <Layout title={entry.data.title}>
   <div class="fadeIn">
-    <!-- <Slideshow images={project.images} /> -->
     <article>
       <h1>{entry.data.title}</h1>
 
@@ -50,7 +50,7 @@ const { Content } = await entry.render();
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={github} alt="GitHub" />
+              <Image class="icon" src={github} alt="GitHub" />
             </a>
           )
         }
@@ -62,7 +62,7 @@ const { Content } = await entry.render();
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={itch} alt="Itch.io" />
+              <Image class="icon" src={itch} alt="Itch.io" />
             </a>
           )
         }
