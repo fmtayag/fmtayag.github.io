@@ -6,7 +6,6 @@ import "@styles/project_details.css";
 import { Image } from "astro:assets";
 import itch from "@images/itch.png";
 import github from "@images/github.png";
-import Navbar from "@components/Navbar.astro";
 
 export async function getStaticPaths() {
   const projectEntries = await getCollection("projects");
@@ -100,11 +99,6 @@ const { Content } = await entry.render();
       <p class="tertiary">
         <i>Posted on {entry.data.pubDate.toDateString()}</i>
       </p>
-
-      <!-- <div class="page-controls margin-top-m">
-        <a href=`/projects/${prevSlug}`>Previous: {prevTitle}</a>
-        <a href=`/projects/${nextSlug}`>Next: {nextTitle}</a>
-      </div> -->
     </article>
   </div>
 </Layout>
