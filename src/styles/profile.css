@@ -4,9 +4,14 @@
 }
 
 #profile img {
-    max-width: 10em;
+    max-width: 20em;
     height: auto;
     display: block;
     margin: 0 auto;
-    border-radius: 40%;
+}
+
+@media only screen and (max-width: 425px) {
+    #profile img {
+        max-width: 15em;
+    }
 }
